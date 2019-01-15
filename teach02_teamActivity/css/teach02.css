@@ -1,0 +1,18 @@
+﻿body {
+ font-size: 16px;
+}
+#firstDiv {
+    background-color: lightpink;
+    font-size: 1.5em;
+}
+#secondDiv {
+    background-color: royalblue;
+    font-size: 2.5em;
+}
+#thirdDiv {
+    background-color: mediumaquamarine;
+    font-size: 2em;
+}
+.divs:hover {
+    font-weight: bold;
+}
