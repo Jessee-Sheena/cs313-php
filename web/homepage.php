@@ -38,53 +38,53 @@
 }else {
    echo "Sorry your answer of " . $scriptures . " was not correct! The answer is Proverbs 3:5-6.</div>";
 }
- echo "<h4>How many kids do I have?</h4>";
+ echo "<div><h4>How many kids do I have?</h4>";
  if ($kid == '2 girls') {
-   echo"Correct the answer is " . $kid;
+   echo"Correct the answer is " . $kid ."</div>";
 }else {
-   echo "Sorry your answer of " . $kid . " was not correct! The answer is 2 girls.";
+   echo "Sorry your answer of " . $kid . " was not correct! The answer is 2 girls.</div>";
 }
- echo "<h4>Where would I most like to go on a senior mission to?</h4>";
+ echo "<div><h4>Where would I most like to go on a senior mission to?</h4>";
  if ($missions == 'Africa') {
-   echo"Correct the answer is " . $missions;
+   echo"Correct the answer is " . $missions ."</div>";
 }else {
-   echo "Sorry your answer of " . $missions . " was not correct! The answer is Africa.";
+   echo "Sorry your answer of " . $missions . " was not correct! The answer is Africa.</div>";
 }
- echo "<h4>What is my favorite desert?</h4>";
+ echo "<div><h4>What is my favorite desert?</h4>";
  if ( $deserts == 'Chocolate') {
-   echo"Correct the answer is " . $deserts;
+   echo"Correct the answer is " . $deserts ."</div>";
 }else {
-   echo "Sorry your answer of " . $deserts . " was not correct! The answer is Chocolate.";
+   echo "Sorry your answer of " . $deserts . " was not correct! The answer is Chocolate.</div>";
 }
- echo "<h4>What is my favorite color?</h4>";
+ echo "<div><h4>What is my favorite color?</h4>";
  if ( $colors == 'Orange') {
-   echo"Correct the answer is " . $colors;
+   echo"Correct the answer is " . $colors ."</div>";
 }else {
-   echo "Sorry your answer of " . $colors . " was not correct! The answer is Orange.";
+   echo "Sorry your answer of " . $colors . " was not correct! The answer is Orange.</div>";
 }
- echo "<h4>When I was a kid I wanted to be a ___________ when I grew up?</h4>";
+ echo "<div><h4>When I was a kid I wanted to be a ___________ when I grew up?</h4>";
  if ( $dream == 'Archeologist') {
-   echo"Correct the answer is " . $dream;
+   echo"Correct the answer is " . $dream ."</div>";
 }else {
-   echo "Sorry your answer of " . $dream . " was not correct! The answer is Archeologist.";
+   echo "Sorry your answer of " . $dream . " was not correct! The answer is Archeologist.</div>";
 }
- echo "<h4>How many siblings do I have?</h4>";
+ echo "<div><h4>How many siblings do I have?</h4>";
  if ( $sibling == '7') {
-   echo"Correct the answer is " . $sibling;
+   echo"Correct the answer is " . $sibling ."</div>";
 }else {
-   echo "Sorry your answer of " . $sibling . " was not correct! The answer is 7.";
+   echo "Sorry your answer of " . $sibling . " was not correct! The answer is 7.</div>";
 }
- echo "<h4>What language do I want to learn fluently?</h4>";
+ echo "<div><h4>What language do I want to learn fluently?</h4>";
  if (  $languages == 'French') {
-   echo"Correct the answer is " . $languages;
+   echo"Correct the answer is " . $languages ."</div>";
 }else {
-   echo "Sorry your answer of " . $languages . " was not correct! The answer is French.";
+   echo "Sorry your answer of " . $languages . " was not correct! The answer is French.</div>";
 }
- echo "<h4>How old was I when I lost my last baby tooth?</h4>";
+ echo "<div><h4>How old was I when I lost my last baby tooth?</h4>";
  if (  $teeths == '13') {
-   echo"Correct the answer is " . $teeths;
+   echo"Correct the answer is " . $teeths ."</div>";
 }else {
-   echo "Sorry your answer of " . $teeths . " was not correct! The answer is 13.";
+   echo "Sorry your answer of " . $teeths . " was not correct! The answer is 13.</div>";
 }
 
 ?>
