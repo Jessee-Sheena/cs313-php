@@ -23,16 +23,16 @@
 <?php
 
  $scriptures = $_POST['scripture'];
- /*$kid = $_Post('kids');
- $missions = $_Post('mission');
- $deserts = $_Post('desert');
- $colors = $_Post('color');
- $dream = $_Post('dreams');
- $sibling = $_Post('siblings');
- $languages = $_Post('language');
- $teeths = $_Post('teeth');
+ $kid = $_POST['kids'];
+ $missions = $_POST['mission'];
+ $deserts = $_POST['desert'];
+ $colors = $_POST['color'];
+ $dream = $_POST['dreams'];
+ $sibling = $_POST['siblings'];
+ $languages = $_POST['language'];
+ $teeths = $_POST['teeth'];
 
- echo "What is my favorite scripture?";
+/* echo "What is my favorite scripture?";
  if ($scriptures == 'Proverbs 3:5-6') {
    echo"Correct My favorite Scripture is" . $scriptures;
 }else {
