@@ -33,12 +33,12 @@
  $teeths = $_POST['teeth'];
 
  echo "What is my favorite scripture?";
- /*if ($scriptures == 'Proverbs 3:5-6') {
+ if ($scriptures == 'Proverbs 3:5-6') {
    echo"Correct My favorite Scripture is" . $scriptures;
 }else {
    echo "Sorry your answer of" . $scriptures . "was not correct! The answer is Proverbs 3:5-6.";
 }
- echo "How many kids do I have?";
+ /*echo "How many kids do I have?";
  if ($kid == '2 girls') {
    echo"Correct the answer is " . $kid;
 }else {
