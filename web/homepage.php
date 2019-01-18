@@ -32,11 +32,11 @@
  $languages = $_POST['language'];
  $teeths = $_POST['teeth'];
 
- echo "<h4>What is my favorite scripture?</h4>";
+ echo "<div><h4>What is my favorite scripture?</h4>";
  if ($scriptures == 'Proverbs 3:5-6') {
-   echo"Correct My favorite Scripture is " . $scriptures;
+   echo"Correct My favorite Scripture is " . $scriptures ."</div>";
 }else {
-   echo "Sorry your answer of " . $scriptures . " was not correct! The answer is Proverbs 3:5-6.";
+   echo "Sorry your answer of " . $scriptures . " was not correct! The answer is Proverbs 3:5-6.</div>";
 }
  echo "<h4>How many kids do I have?</h4>";
  if ($kid == '2 girls') {
