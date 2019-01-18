@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\web",
+    "\\web\\scripts",
+    "\\web\\teach02_teamActivity"
   ],
-  "SelectedNode": "\\web",
+  "SelectedNode": "\\web\\teach02_teamActivity\\index.html",
   "PreviewInSolutionExplorer": false
 }
