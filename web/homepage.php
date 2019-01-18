@@ -32,8 +32,8 @@
  $languages = $_POST['language'];
  $teeths = $_POST['teeth'];
 
-/* echo "What is my favorite scripture?";
- if ($scriptures == 'Proverbs 3:5-6') {
+ echo "What is my favorite scripture?";
+ /*if ($scriptures == 'Proverbs 3:5-6') {
    echo"Correct My favorite Scripture is" . $scriptures;
 }else {
    echo "Sorry your answer of" . $scriptures . "was not correct! The answer is Proverbs 3:5-6.";
