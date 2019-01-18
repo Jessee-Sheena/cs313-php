@@ -22,7 +22,7 @@
     <main>
 <?php
 
- $scriptures = $_POST('scripture');
+ $scriptures = $_POST['scripture'];
  /*$kid = $_Post('kids');
  $missions = $_Post('mission');
  $deserts = $_Post('desert');
