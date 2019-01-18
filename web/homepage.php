@@ -22,8 +22,8 @@
     <main>
 <?php
 
- /*$scriptures = $_Post('scripture');
- $kid = $_Post('kids');
+ $scriptures = $_Post('scripture');
+ /*$kid = $_Post('kids');
  $missions = $_Post('mission');
  $deserts = $_Post('desert');
  $colors = $_Post('color');
