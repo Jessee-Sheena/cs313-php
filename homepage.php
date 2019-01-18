@@ -18,11 +18,11 @@
         </div>
 
     </header>
-    <body>
+   <body>
     <main>
 <?php
 
- $scriptures = $_Post('scripture');
+/* $scriptures = $_Post('scripture');
  $kid = $_Post('kids');
  $missions = $_Post('mission');
  $deserts = $_Post('desert');
@@ -85,7 +85,7 @@
    echo"Correct the answer is " . $teeths;
 }else {
    echo "Sorry your answer of" . $teeths . "was not correct! The answer is 13.";
-}
+}*/
 
 ?>
   </main>
