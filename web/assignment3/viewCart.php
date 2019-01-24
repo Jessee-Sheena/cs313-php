@@ -11,6 +11,6 @@
    
    if(!isset($_SESSION['total'])) {
        $_SESSION['total'] = 0;
-       $_SESSION['producst']
+       $_SESSION['producst'];
    }
  ?>
