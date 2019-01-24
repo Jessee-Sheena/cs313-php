@@ -1,9 +1,9 @@
 <?php 
-  echo "hello world";
-/*session_start();
+ 
+session_start();
 
-  /* $products = array();
-   $prices = array();
+  $products = array();
+  $prices = array();
    
 
    $name = $_POST['name'];
@@ -14,5 +14,5 @@
    if(!isset($_SESSION['total'])) {
        $_SESSION['total'] = 0;
        $_SESSION['producst'];
-   }*/
+   }
  ?>
