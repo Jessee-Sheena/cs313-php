@@ -1,7 +1,7 @@
 <?php 
   $name = $_POST['name'];
    $cost = $POST['cost'];
-   echo "$name , $cost";
+   echo $name . "," . $cost;
 /*session_start();
 
   $products = array();
