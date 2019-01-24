@@ -15,4 +15,6 @@ session_start();
        $_SESSION['total'] = 0;
        $_SESSION['producst'];
    }
+   echo "$products[0]";
+   echo "$prices[0];"
  ?>
