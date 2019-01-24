@@ -17,7 +17,7 @@ $(".buttons").on("click", function (event) {
 			type: 'GET',
 			data: { name: id, cost: price },
 			success: function (data) {
-
+				alert('Data: ' + data);
 			}
 		})
 	});
