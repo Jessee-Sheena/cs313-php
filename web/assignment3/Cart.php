@@ -1,6 +1,6 @@
 <?php 
   $name = $_POST['name'];
-   $cost = $POST['cost'];
+   $cost = $_POST['cost'];
    echo $name . "," . $cost;
 /*session_start();
 
@@ -9,7 +9,7 @@
    
 
    $name = $_POST['name'];
-   $cost = $POST['cost'];
+   $cost = $_POST['cost'];
    array_push($products, $name);
    array_push($prices, $cost);
    
