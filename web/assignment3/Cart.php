@@ -16,5 +16,5 @@ session_start();
        $_SESSION['producst'];
    }
    echo "$products[0]";
-   echo "$prices[0];"
+   echo "$prices[0]";
  ?>
