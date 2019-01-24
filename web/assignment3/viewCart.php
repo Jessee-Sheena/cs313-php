@@ -1,6 +1,8 @@
-<?php session_start();
+<?php 
+  echo "hello world";
+/*session_start();
 
-   $products = array();
+  /* $products = array();
    $prices = array();
    
 
@@ -12,5 +14,5 @@
    if(!isset($_SESSION['total'])) {
        $_SESSION['total'] = 0;
        $_SESSION['producst'];
-   }
+   }*/
  ?>
