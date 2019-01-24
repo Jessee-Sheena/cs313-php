@@ -1,6 +1,6 @@
 <?php 
-print_r($_POST)
-error_reporting(E_ALL);
-  //$id = $_POST['name'];
- // echo "name of item" . $id;
+  print_r($_POST);
+
+  $id = $_POST['name'];
+  echo "name of item" . $id;
 ?>

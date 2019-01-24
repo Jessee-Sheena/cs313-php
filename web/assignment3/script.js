@@ -5,21 +5,20 @@
  * makes sure form is not empty if trying to submit
  * ******************************************/
 $(document).ready(function () {
-$(".buttons").on("click", function (event) {
+	$(".buttons").on("click", function (event) {
 		event.stopPropagation();
 		event.stopImmediatePropagation();
 
 		var id = $(this).attr('id');
 		var price = $(this).val();
-
 		$.ajax({
-			url: 'Cart.php',
 			type: 'POST',
-			data: { "name": id, "cost": price },
-			success: function (data) {
-				alert('Data: ' + data);
+			url: 'cart.php',
+			data: { name: id, cost: price },
+			success: function (response) {
+				alert('Data: ' + response);
 			}
-		})
+		});
 	});
 });
 
