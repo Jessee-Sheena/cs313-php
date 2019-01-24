@@ -9,7 +9,7 @@ $(document).ready(function () {
 		var price = $(this).val();
 
 		$.ajax({
-			url: 'veiwCart.php',
+			url: 'Cart.php',
 			type: 'POST',
 			data: { name: id, cost: price },
 			success: function (data) {
