@@ -1,6 +1,8 @@
 <?php 
- 
-session_start();
+  $name = $_POST['name'];
+   $cost = $POST['cost'];
+   echo "$name , $cost";
+/*session_start();
 
   $products = array();
   $prices = array();
@@ -16,5 +18,5 @@ session_start();
        $_SESSION['producst'];
    }
    echo "$products[0]";
-   echo "$prices[0]";
+   echo "$prices[0]";*/
  ?>
