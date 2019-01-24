@@ -15,7 +15,7 @@ $(".buttons").on("click", function (event) {
 		$.ajax({
 			url: 'Cart.php',
 			type: 'POST',
-			data: { 'name' : id, 'cost' : price },
+			data: { "name": id, "cost": price },
 			success: function (data) {
 				alert('Data: ' + data);
 			}
