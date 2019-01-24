@@ -1,7 +1,7 @@
 <?php 
-  $id = $_GET["name"];
-   $price = $_GET["cost"];
-   echo $id . "," . $price;
+  $id = $_POST['name'];
+  // $price = $_GET["cost"];
+   echo $id;
 /*session_start();
 
   $products = array();
