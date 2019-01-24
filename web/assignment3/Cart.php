@@ -1,6 +1,6 @@
 <?php 
-  $name = $_GET['name'];
-   $cost = $_GET['cost'];
+  $name = $_GET['id'];
+   $cost = $_GET['price'];
    echo $name . "," . $cost;
 /*session_start();
 
