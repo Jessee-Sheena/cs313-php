@@ -1,0 +1,130 @@
+﻿body
+{ text-align:center;
+  background-color:pink;
+}
+header {
+    background-color: #503c31;
+    margin:0;
+    position:relative;
+}
+    header > img {
+        width: 150px;
+        height: auto;
+        vertical-align: middle;
+        position:absolute;
+        top:4%;
+        left:10%;
+        margin:.5em;
+    }
+
+header div{
+    display:inline-block;
+    vertical-align:middle;
+    margin: 1em 4%;
+}
+header h1 {
+    color: white;
+    margin-bottom:0;
+}
+header h2 {
+    color:pink;
+    margin: .2em 0em .8em 0em;
+    padding:0;
+}
+main {
+    max-width: 900px;
+    background-color: #faf7ef;
+    margin: auto;
+    border: 2px solid #503c31;
+    border-top:none;
+}
+.tablecontainer {
+    position: relative;
+    max-width:90%;
+    margin:auto;
+}
+.tablecontainer table {
+    max-width:95%;
+    margin:auto;
+    padding: 2em;
+}
+th {
+    font-size:1.2em;
+}
+td img {
+    max-width:250px;
+}
+#purchase {
+    padding-left: .5em;
+    visibility: hidden;
+}
+#veiwCart {
+    position: absolute;
+    bottom: 50px;
+    right: 60px;
+}
+
+#personalInfo {
+    background-color: white;
+    max-width: 55%;
+    margin: auto;
+    text-align: left;
+    padding: 1em;
+    border: 2px solid #503c31;
+    position:relative;
+    margin-bottom:2em;
+}
+#personalInfo h2 {
+    text-align:center;
+    margin:0;
+}
+#personalInfo .pInfo {
+    position:absolute;
+    right:40%;
+}
+    #personalInfo input.rInfo {
+        position: absolute;
+        right: 70%;
+    }
+    #addresslabel {
+        margin-bottom: 54px;
+    }
+#total {
+    text-align: left;
+    margin-left:65%;
+    max-width:150px;
+}
+.error {
+    color:red;
+    visibility:hidden;
+    position:absolute;
+    right: 6%;
+}
+#radioerror {
+    color: red;
+    visibility: hidden;
+    position: absolute;
+    right: 8%;
+}
+#footerNav {
+    background-color: #503c31;
+    color: white;
+    padding: .2em;
+}
+
+    #footerNav li {
+        display: inline;
+        margin: 4%;
+    }
+
+        #footerNav li a {
+            color: white;
+        }
+
+            #footerNav li a:hover {
+                color: #215869
+            }
+
+            #footerNav li a:visited {
+                color: white;
+            }
