@@ -1,6 +1,6 @@
 <?php 
-  print_r($_REQUEST);
+  print_r($_POST);
 
-  $id = $_REQUEST['name'];
+  $id = $_POST['name'];
   echo "name of item" . $id;
 ?>

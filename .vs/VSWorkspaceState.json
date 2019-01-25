@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\web",
-    "\\web\\assignment3"
+    "\\web\\assignment3",
+    "\\web\\scripts"
   ],
-  "SelectedNode": "\\web\\assignment3\\viewCart.php",
+  "SelectedNode": "\\web\\assignment3\\Cart.php",
   "PreviewInSolutionExplorer": false
 }
