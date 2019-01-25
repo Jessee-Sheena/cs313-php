@@ -1,24 +1,26 @@
 <?php 
  
- $id = $_POST['name'];
- $price = $_POST["cost"];
- echo "name of item" . $id;
- /*session_start();
+ session_start();
 
   $products = array();
   $prices = array();
-   
+  
+$_SESSION['products'] = array(); 
+$_SESSION['products'] = $_GET['name'];
+$_SESSION['prices'] = array();
+$_SESSION['prices'] = $_GET["cost"];
 
-   $name = $_POST['name'];
-   $cost = $_POST['cost'];
-   array_push($products, $name);
-   array_push($prices, $cost);
+
+foreach($_SESSION["products"] as $products)
+{
+    echo $products;
+}
+
+  
    
    if(!isset($_SESSION['total'])) {
        $_SESSION['total'] = 0;
-       $_SESSION['producst'];
-   }
-   echo "$products[0]";
-   echo "$prices[0]";*/ 
+      }
+  
 
 ?>
