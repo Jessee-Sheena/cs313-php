@@ -76,7 +76,7 @@
             </table>
             <button type="button" id="veiwCart">View Cart</button>
            </div>
-        <form method="post" action="Cart.php">
+        <form method="post" action="cart.php">
             <input type="button" value=" my Name" name="test" />
         </form>
         <footer>
