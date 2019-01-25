@@ -1,5 +1,5 @@
 <?php 
- 
+ header("Content-Type: application/json", true);
  $id = $_GET['name'];
  $price = $_GET["cost"];
  echo "name of item" . $id;
