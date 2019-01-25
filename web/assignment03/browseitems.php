@@ -38,7 +38,7 @@
                         </td>
                         <td>$4.00</td>
                         <td><button class="buttons" type="submit" name="glimmer" value="4.00">Add to Cart</button></td>
-                    </tr><?php $name = $_Post['name']; echo $name;?>
+                    </tr>
                     <tr>
                         <td><img src="images/Fall_Dolls.jpg" alt="fall doll kit" /></td>
                         <td>This fun fall digital scrap-booking kit is perfect for preserving your favorite fall memories!</td>
@@ -78,7 +78,7 @@
             <form>
             <button type="button" id="veiwCart">View Cart</button>
            </form>
-        
+        <?php $name = $_Post['name']; echo $name;?>
         <footer>
 
             <nav id="footerNav">
