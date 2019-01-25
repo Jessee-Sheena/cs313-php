@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -77,7 +77,7 @@
             <button type="button" id="veiwCart">View Cart</button>
            </div>
         <form method="post" action="cart.php">
-            <input type="button" value=" my Name" name="test" />
+            <input type="submit" value=" my Name" name="test" />
         </form>
         <footer>
 
