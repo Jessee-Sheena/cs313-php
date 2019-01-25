@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -19,7 +19,7 @@
         </div>
     </header>
     <main>
-        <div "class="tablecontainer">
+        <div class="tablecontainer">
             <table>
                 <thead>
                     <tr>
@@ -75,10 +75,10 @@
                 </tbody>
             </table>
             <form>
-            <button type="button" id="veiwCart">View Cart</button>
-           </form>  
-            </div>
-                 
+                <button type="button" id="veiwCart">View Cart</button>
+            </form>
+        </div>
+
         <footer>
 
             <nav id="footerNav">
@@ -90,6 +90,6 @@
             </nav>
         </footer>
     </main>
-    
+
 </body>
 </html> 
