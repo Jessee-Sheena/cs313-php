@@ -19,7 +19,7 @@
         </div>
     </header>
     <main>
-        <form "class="tablecontainer" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"
+        <form "class="tablecontainer" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <table>
                 <thead>
                     <tr>
@@ -38,7 +38,7 @@
                         </td>
                         <td>$4.00</td>
                         <td><button class="buttons" type="submit" name="glimmer" value="4.00">Add to Cart</button></td>
-                    </tr><?php $name = $_Post['name']; echo $name?>
+                    </tr><?php $name = $_Post['name']; echo $name;?>
                     <tr>
                         <td><img src="images/Fall_Dolls.jpg" alt="fall doll kit" /></td>
                         <td>This fun fall digital scrap-booking kit is perfect for preserving your favorite fall memories!</td>
