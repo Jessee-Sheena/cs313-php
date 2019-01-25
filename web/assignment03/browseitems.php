@@ -19,7 +19,7 @@
         </div>
     </header>
     <main>
-        <form "class="tablecontainer" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <div "class="tablecontainer">
             <table>
                 <thead>
                     <tr>
@@ -37,7 +37,7 @@
                             devistating illness. Preserve your memories of this time with these beautiful designs.
                         </td>
                         <td>$4.00</td>
-                        <td><button class="buttons" type="submit" name="glimmer" value="4.00">Add to Cart</button></td>
+                        <td><button class="buttons" type="button" id="glimmer" value="4.00">Add to Cart</button></td>
                     </tr>
                     <tr>
                         <td><img src="images/Fall_Dolls.jpg" alt="fall doll kit" /></td>
@@ -74,11 +74,11 @@
                     </tr>
                 </tbody>
             </table>
-            </form>
             <form>
             <button type="button" id="veiwCart">View Cart</button>
-           </form>
-        <?php $name = $_Post['name']; echo $name;?>
+           </form>  
+            </div>
+                 
         <footer>
 
             <nav id="footerNav">
