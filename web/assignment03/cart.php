@@ -1,6 +1,5 @@
 <?php 
- $test = $_POST['test'];
- echo $test;
+ 
  $id = $_POST['name'];
  $price = $_POST["cost"];
  echo "name of item" . $id;
