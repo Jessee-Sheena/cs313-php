@@ -1,7 +1,7 @@
 <?php 
- header("Content-Type: application/json", true);
- $id = $_GET['name'];
- $price = $_GET["cost"];
+ //header("Content-Type: application/json", true);
+ $id = $_POST['name'];
+ $price = $_POST["cost"];
  echo "name of item" . $id;
  /*session_start();
 
