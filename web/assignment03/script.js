@@ -12,7 +12,7 @@ $(document).ready(function () {
 		var id = $(this).attr('id');
 		var price = $(this).val();
 		$.ajax({
-			type: 'POST',
+			type: 'GET',
 			url: '/assignment03/cart.php',
 			
 			data: { name: id, cost: price },
