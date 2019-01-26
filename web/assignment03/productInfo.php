@@ -1,0 +1,45 @@
+<?php 
+  require_once "products.php";
+  $item = new Products();
+  $itemArray = $item->getProducts();
+  ?>
+  <Form class="tablecontainer">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Products</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th id="purchase">Click to Purchase</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php 
+                   if (! empty($itemArray)) {
+                      foreach ($itemArray as $key => $value) {
+                      echo "<tr>";
+                        echo" <td><img src=\"" . $itemArray[$key]["image"] ."\" alt=\"". $itemArray[$key]["name"]. "\" /></td>";
+                        echo "<td>";
+                        echo $itemArray[$key]["description"];
+                        echo "</td>";
+                        echo "<td>", $itemArray[$key]["price"] ."</td>";
+                        echo "<td><input type=\"text\" id=\"qty_". $itemArray[$key]["id"]." name=\"quantity\" value=\"1\" size=\"2\" /></td>";
+                        echo "<td><button class=\"buttons\" type=\"button\" id=\"add_".$itemArray[$key]["id"]."\" onclick=\"takeAction('add', '".$itemArray[$key]["id"]."')\">Add to Cart</button></td>";
+                       echo "</tr>";
+                      }
+                                          
+                   }  
+                ?>              
+             </tbody>      
+             
+           </table>
+            
+                <a href="cart.php" id="veiwCart">View Cart</a>
+                   
+        </form>
+                         
+                             
+                  
+              
+               
