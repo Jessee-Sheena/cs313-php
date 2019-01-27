@@ -4,8 +4,8 @@ session_start();
 require_once "products.php";
 $items = new Products();
 $itemArray = $items->getProducts();
- $_SESSION['action'] = $_POST["action"];
- $_SESSION['id'] = $_POST["id"];
+ $_SESSION['action'] = htmlspecialchars( $_POST["action"]);
+ $_SESSION['id'] = htmlspecialchars( $_POST["id"]);
 if(!empty($_SESSION['action'])) {
  switch ($_SESSION['action']) {
     case "add":         

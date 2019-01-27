@@ -1,11 +1,11 @@
 <?php
 session_start();
 include_once "header.php";
-$_SESSION['name'] = $_POST['name'];
-$_SESSION['lname'] = $_POST['lname'];
-$_SESSION['city'] = $_POST['city'];
-$_SESSION['state'] = $_POST['state'];
-$_SESSION['zip']= $_POST['zip'];
+$_SESSION['name'] = htmlspecialchars($_POST['name']);
+$_SESSION['lname'] = htmlspecialchars($_POST['lname']);
+$_SESSION['city'] = htmlspecialchars($_POST['city']);
+$_SESSION['state'] = htmlspecialchars($_POST['state']);
+$_SESSION['zip']= htmlspecialchars($_POST['zip']);
  ?>
  <div>
  <h1 class="cartHeading"><?php echo $_SESSION['name']; ?>, thank you so much for your order! </h1> <p>Contents:</p><?php
