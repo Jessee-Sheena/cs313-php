@@ -4,10 +4,10 @@
  * ******************************************/
 function takeAction(action, id) {
 	var query = "";
-	var temp = '#qty_' + id;
+	var pagePathName = window.location.pathname;
 	switch (action) {
 		case "add":
-			query = 'action=' + action + '&id=' + id + '&quantity=' + $(temp).val();
+			query = 'action=' + action + '&id=' + id;
 			break;
 		case "remove":
 			query = 'action' + action + '&id=' + id;
@@ -23,7 +23,7 @@ function takeAction(action, id) {
 		data: query,
 		type: "POST",
 		success: function (data) {
-			$('#itemInCart').html(data);
+			$('#itemInCart').html("data");
 		}
 	});
 

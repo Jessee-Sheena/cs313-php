@@ -32,6 +32,7 @@ if(!empty($_SESSION['action'])) {
          break;
      case "empty":
           unset($_SESSION['cart']);
+          session_destroy();
           break;
  }
     
