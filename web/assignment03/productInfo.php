@@ -9,8 +9,7 @@
                     <tr>
                         <th>Products</th>
                         <th>Description</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
+                        <th>Price</th>                        
                         <th id="purchase">Click to Purchase</th>
                     </tr>
                 </thead>
@@ -23,9 +22,8 @@
                         echo "<td>";
                         echo $itemArray[$key]["description"];
                         echo "</td>";
-                        echo "<td>", $itemArray[$key]["price"] ."</td>";
-                        echo "<td><input type=\"text\" id=\"qty_". $itemArray[$key]["id"]." name=\"quantity\" value=\"1\" size=\"2\" /></td>";
-                        echo "<td><button class=\"buttons\" type=\"button\" id=\"add_".$itemArray[$key]["id"]."\" onclick=\"takeAction('add', '".$itemArray[$key]["id"]."')\">Add to Cart</button></td>";
+                        echo "<td>", $itemArray[$key]["price"] ."</td>";                        
+                        echo "<td><button class=\"buttons\" type=\"button\" id=\"add_".$itemArray[$key]["id"]."\" onclick=\"takeAction('add', '". $itemArray[$key]["id"] ."')\">Add to Cart</button></td>";
                        echo "</tr>";
                       }
                                           

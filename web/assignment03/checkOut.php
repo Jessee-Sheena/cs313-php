@@ -1,11 +1,11 @@
  <?php
-
+    include_once "header.php"
 
  ?>
                 
      
 
-        <form name="cart" id="personalInfo" action="" onsubmit="return validateForm()" onreset="resetFields()">
+        <form name="cart" id="personalInfo" action="confirmation.php" class="tablecontainer">
             <h2>Purchase Information</h2>
             <p>
                 <label for="first_name">First Name:</label>
@@ -25,5 +25,9 @@
                 <label for="zipaddress">Zip Code:</label><input type="number" name="zipcode" class="pInfo" type="" id="zipaddress">
                 <span class="error"> Invalid Address</span><br /> (street address, <br />city, state, and zip)<br />
             </p>
-           
+           <input type="submit" name="input" value="Purchase Items Now">
         </form>
+
+        <?php 
+         include_once "footer.php"
+        ?>

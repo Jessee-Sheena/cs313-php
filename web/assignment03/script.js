@@ -4,9 +4,10 @@
  * ******************************************/
 function takeAction(action, id) {
 	var query = "";
+	var temp = '#qty_' + id;
 	switch (action) {
 		case "add":
-			query = 'action=' + action + '&id=' + id + '&quantity=' + $('#qty_' + id).val();
+			query = 'action=' + action + '&id=' + id + '&quantity=' + $(temp).val();
 			break;
 		case "remove":
 			query = 'action' + action + '&id=' + id;
