@@ -33,8 +33,8 @@ Class Products {
              "image" => "images/Fall_Dolls.jpg",
              "description"=> "This fun fall digital scrap-booking kit is perfect for preserving your favorite fall memories!"
              ),
-           "P's" => array(
-              "id" => "P's",
+           "P" => array(
+              "id" => "P",
              "name"=> "P's and Q's",
              "price" => "2.50",
              "image" => "images/psandqs.jpg",

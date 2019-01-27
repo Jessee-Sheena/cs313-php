@@ -18,11 +18,14 @@ if(!empty($_SESSION['action'])) {
               $_SESSION['cart'] = $productArray;
            }
            break;
-    case "remove":
+    case "remove":         
          if(!empty($_SESSION['cart'])) {
+           
             foreach($_SESSION['cart'] as $key => $value) {
+               
                 if($_SESSION['id'] == $key) {
                    unset($_SESSION['cart'][$key]);
+                   
                 }
                 if(empty($_SESSION['cart'])){
                   unset($_SESSION['cart']);
@@ -41,7 +44,7 @@ if(!empty($_SESSION['action'])) {
 
 if(isset($_SESSION['cart'])){
    $total = 0;
-  echo"<div><h1>Shopping Cart</h1>";
+  echo"<div><h1 class=\"cartHeading\">Shopping Cart</h1>";
    echo "<table class=\"tablecontainer\">";
       echo "<thead>";
         echo"<tr>";
@@ -53,14 +56,17 @@ if(isset($_SESSION['cart'])){
        echo "<tbody>";
          foreach ($_SESSION["cart"] as $item){
             echo "<tr>";
-            echo" <td><img src=\"" . $item["image"] ."\" alt=\"". $item["name"]. "\" /></td>";
+            echo "<td><img src=\"" . $item["image"] ."\" alt=\"". $item["name"]. "\" /></td>";
             echo "<td>", $item["price"] ."</td>";                        
-            echo "<td><button class=\"buttons\" type=\"button\" \" onclick=\"takeAction('remove', '". $_SESSION['id'] ."')\">Remove From Cart</button></td>";
+            echo "<td><button class=\"buttons\" type=\"button\" \" onclick=\"takeAction('remove', '". $item['id'] ."')\">Remove From Cart</button></td>";
             echo "</tr>";
+            }
      echo "</tbody>";
   echo "</table>";
  echo "</div>";
-    }
+    
                                           
+} else {
+   echo "There are no Products currently in your cart!";
 }
  ?>

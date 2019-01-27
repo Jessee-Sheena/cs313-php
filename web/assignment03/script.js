@@ -4,16 +4,16 @@
  * ******************************************/
 function takeAction(action, id) {
 	var query = "";
-	var pagePathName = window.location.pathname;
+	
 	switch (action) {
 		case "add":
 			query = 'action=' + action + '&id=' + id;
 			break;
 		case "remove":
-			query = 'action' + action + '&id=' + id;
+			query = 'action=' + action + '&id=' + id;
 			break;
 		case "empty":
-			query = 'action' + action;
+			query = 'action=' + action;
 			break;
 
 
@@ -23,7 +23,8 @@ function takeAction(action, id) {
 		data: query,
 		type: "POST",
 		success: function (data) {
-			$('#itemInCart').html("data");
+			console.log(data);
+			$('#itemInCart').html(data);
 		}
 	});
 

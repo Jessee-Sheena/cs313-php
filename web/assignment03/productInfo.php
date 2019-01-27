@@ -22,8 +22,11 @@
                         echo "<td>";
                         echo $itemArray[$key]["description"];
                         echo "</td>";
-                        echo "<td>", $itemArray[$key]["price"] ."</td>";                        
-                        echo "<td><button class=\"buttons\" type=\"button\" id=\"add_".$itemArray[$key]["id"]."\" onclick=\"takeAction('add', '". $itemArray[$key]["id"] ."')\">Add to Cart</button></td>";
+                        echo "<td>", $itemArray[$key]["price"] ."</td>";                       
+                                                
+                        echo"<td><button class=\"buttons\" type=\"button\" id=\"add_". $itemArray[$key]["id"]."\" onclick=\"takeAction('add', '". $itemArray[$key]["id"]."')\">Add to Cart</button>";
+                        
+                        echo "</td>";
                        echo "</tr>";
                       }
                                           
@@ -33,7 +36,8 @@
              
            </table>
             
-                <a href="cart.php" id="veiwCart">View Cart</a>
+                <a href="cart.php" id="veiwCart" class="shoppingButtons"
+>View Cart</a>
                    
         </form>
                          

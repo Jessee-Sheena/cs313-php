@@ -106,6 +106,30 @@ td img {
     position: absolute;
     right: 8%;
 }
+.cartHeading {
+    margin-top: 0;
+}
+.confirmimg {
+    max-width: 150px;
+    margin:0em 1em;
+}
+#buttonSection {
+    padding: 1em;
+}
+a.shoppingButtons {
+    text-decoration: none;
+    border: 1px black;
+    background-color: grey;
+    padding: 1px 6px;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    -webkit-appearance: button;
+}
 #footerNav {
     background-color: #503c31;
     color: white;
