@@ -88,6 +88,9 @@ main {
     max-width: 60%;
     margin: auto;
 }
+.listSection img {
+    max-width: 125px;
+}
 .listHeader {
     background-color: darkred;
     color: white;
