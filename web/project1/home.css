@@ -89,7 +89,7 @@ main {
     margin: auto;
 }
 .listSection img {
-    max-width: 20%;
+    max-width: 100%;
     grid-row: span 2;
 }
 .listHeader {
@@ -102,6 +102,6 @@ main {
     color: white;
     text-decoration: none;
 }
-.listHeader p {
+.listSection p {
     padding: 1em;
 }
