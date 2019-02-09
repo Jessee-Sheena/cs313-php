@@ -30,10 +30,17 @@
                {
                               
                 echo '<a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a>';
-                $count += 1;
+                
                }				
 				break;
 			case 'name':
+               $keyWord = $_POST['recipeName'];
+               foreach ($db->query("SELECT recipe_name, recipe_id FROM recipe WHERE lower(recipe_name) = lower ( '" . $keyWord ."')") as $row)
+               {
+                              
+                echo '<a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a>';
+                
+               }			
 				
 				break;
 			case 'cuisine':
