@@ -89,7 +89,7 @@ main {
     margin: auto;
 }
 .listSection img {
-    max-width: 125px;
+    max-width: 20%;
     grid-row: span 2;
 }
 .listHeader {
