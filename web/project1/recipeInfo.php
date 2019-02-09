@@ -48,7 +48,7 @@
     WHERE r.recipe_id =". $id ."AND s.section_id = 1
     ORDER BY q.ingredient_id ASC;") as $row)
         {?>
-        <h2> <?php echo $row['s.section_name']?> </h2>
+        <h2> <?php echo $row['section_name']?> </h2>
 
   <?php
    } 
