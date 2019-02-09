@@ -96,8 +96,12 @@ main {
     background-color: darkred;
     color: white;
     margin-top: 0em;
+    padding: .3em 0em 0em 1em;
 }
 .listHeader a {
     color: white;
     text-decoration: none;
+}
+.listHeader p {
+    padding: 1em;
 }
