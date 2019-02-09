@@ -44,16 +44,49 @@
 				
 				break;
 			case 'cuisine':
-				
+				 $keyWord = $_POST['typeCuisine'];
+               foreach ($db->query("SELECT recipe_name, recipe_id FROM recipe WHERE lower(cuisine) = lower ( '" . $keyWord ."')") as $row)
+               {
+                              
+                echo '<a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a>';
+                
+               }	
 				break;
 			case 'cook':
-				
+                $keyWord = $_POST['cookTime'];
+               foreach ($db->query("SELECT recipe_name, recipe_id FROM recipe WHERE lower(cook_time) = lower ( '" . $keyWord ."')") as $row)
+               {
+                              
+                echo '<a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a>';
+                
+               }				
 				break;
 			case 'prep':
-				
+                $keyWord = $_POST['prepTime'];
+               foreach ($db->query("SELECT recipe_name, recipe_id FROM recipe WHERE lower(prep_time) = lower ( '" . $keyWord ."')") as $row)
+               {
+                              
+                echo '<a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a>';
+                
+               }							
 				break;
 			case 'ingredients':
-						
+				$ingredient1 = $_POST['ingredient1'];
+                $ingredient2 = $_POST['ingredient2'];
+                $ingredient3 = $_POST['ingredient3'];
+                $ingredient4 = $_POST['ingredient4'];
+               foreach ($db->query("SELECT
+                          r.recipe_id,
+                          r.recipe_name,
+                          FROM ingredients AS i
+                          JOIN recipe_ingredients AS q ON q.ingredient_id = i.ingredient_id
+                          JOIN recipe AS r ON r.recipe_id = q.recipe_id
+                          WHERElower( i.ingredient_name) = lower ( '" . $ingredient1 ."')") as $row)
+               {
+                              
+                echo '<a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a>';
+                
+               }			
 				break;
                 }
        
