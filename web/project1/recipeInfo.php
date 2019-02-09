@@ -34,8 +34,23 @@
          </table>
     </div>
         
-     <?php  }  ?>
+     <?php  }  
+     foreach ($db->query("SELECT
+        i.ingredient_name,
+        q.ingredient_amount,
+        m.unit,
+		s.section_name
+    FROM ingredients AS i
+    JOIN recipe_ingredients AS q ON q.ingredient_id = i.ingredient_id
+    JOIN measurement AS m ON m.measurement_id = q.measurement_id
+    JOIN recipe AS r ON r.recipe_id = q.recipe_id
+    JOIN section AS s ON s.section_id = q.section_id
+    WHERE r.recipe_id =". $id ."AND s.section_id = 1
+    ORDER BY q.ingredient_id ASC;") as $row)
+        {?>
+        <h2> <?php echo row['s.section_name']?> </h2>
 
   <?php
-   include_once "footer.php";
+   } 
+    include_once "footer.php";
  ?>

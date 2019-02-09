@@ -57,8 +57,8 @@ SELECT
     JOIN measurement AS m ON m.measurement_id = q.measurement_id
     JOIN recipe AS r ON r.recipe_id = q.recipe_id
     JOIN section AS s ON s.section_id = q.section_id
-    WHERE r.recipe_id = 2
-    ORDER BY i.ingredient_name ASC
+    WHERE r.recipe_id = 2 AND s.section_id = 1
+    ORDER BY q.ingredient_id ASC;
 
 	SELECT
         s.step_number AS stepNo,
