@@ -1,0 +1,58 @@
+header {
+    text-align: center;
+    font-family: 'Emilys Candy', cursive;
+    
+    
+}
+    header h1 {
+        font-size: 3em;
+        margin-bottom: 0;
+        color: darkred;
+    }
+    header h2 {
+        font-family: 'Srisakdi', cursive;
+        color: #414830;
+        margin-top: 0;
+    }
+nav {
+    border-bottom: 2px solid #414830;
+    border-top: 2px solid #414830;
+}
+nav ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    list-style-type: none;
+}
+    #navBar a {
+        text-decoration: none;
+        color: darkred;
+        font-size: 1.2em;
+    }
+
+#logo {
+    display: none;
+}
+main {
+    max-width:95%;
+    margin: 2em auto;
+}
+#mainPage {
+    max-width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    justify-items: center;
+}
+.homeImg {
+    max-width: 100%;
+}
+#searchForm {
+    max-width: 80%;
+    margin: 2em auto;
+    font-size: 2em;
+}
+#searches, #keys, #names, #cuisineType, #timeCook, #timePrep, .ingredientsList {
+    font-size: .7em;
+}

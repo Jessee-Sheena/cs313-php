@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\sql",
     "\\web",
     "\\web\\assignment03"
   ],
-  "SelectedNode": "\\web\\assignment03\\action.php",
+  "SelectedNode": "\\sql\\myDb.sql",
   "PreviewInSolutionExplorer": false
 }
