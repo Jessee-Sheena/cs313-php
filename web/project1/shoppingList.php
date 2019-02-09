@@ -3,7 +3,7 @@
    include_once "header.php";   
    require "config.php";
    $db=getDb();
-   echo $_SESSION['id'];
+   
    ?>
    <div>
    <h1>Shopping List</h1>
@@ -13,7 +13,7 @@
                          FROM ingredients AS i
                          JOIN recipe_ingredients AS q ON q.ingredient_id = i.ingredient_id
                          JOIN recipe AS r ON r.recipe_id = q.recipe_id
-                         WHERE r.recipe_id =". $_SESSION['id']."AND s.section_id = 2
+                         WHERE r.recipe_id =". $_SESSION['id']."
                          ORDER BY q.ingredient_id ASC;") as $row)
                  {?>
         
