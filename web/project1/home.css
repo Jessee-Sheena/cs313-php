@@ -65,7 +65,7 @@ main {
     max-width: 80%;
     margin: auto;
 }
-#tableData {
+.tableData {
     color: blue;
     margin: 1em;
 }
