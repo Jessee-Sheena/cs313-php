@@ -39,52 +39,52 @@
   <?php  }  ?>
      <div id="ingredientList">
         <h2> Ingredients <h2>
+           <div>
+              <h3> Main Entre</h3>
+              <?php
+                  foreach ($db->query("SELECT
+                          i.ingredient_name,
+                          q.ingredient_amount,
+                          m.unit,
+		                  s.section_name
+                          FROM ingredients AS i
+                          JOIN recipe_ingredients AS q ON q.ingredient_id = i.ingredient_id
+                          JOIN measurement AS m ON m.measurement_id = q.measurement_id
+                          JOIN recipe AS r ON r.recipe_id = q.recipe_id
+                          JOIN section AS s ON s.section_id = q.section_id
+                          WHERE r.recipe_id =". $id ."AND s.section_id = 1
+                          ORDER BY q.ingredient_id ASC;") as $row)
+                  {?>
+        
+                      <p><?php echo $row['ingredient_amount'] . $row['unit'] . '<span class="space"> ' . $row['ingredient_name'] . '</span>'  ?><p>    
+
+              <?php
+                   } ?>
+           </div>
         <div>
-        <h3> Main Entre</h3>
-  <?php
-     foreach ($db->query("SELECT
-        i.ingredient_name,
-        q.ingredient_amount,
-        m.unit,
-		s.section_name
-    FROM ingredients AS i
-    JOIN recipe_ingredients AS q ON q.ingredient_id = i.ingredient_id
-    JOIN measurement AS m ON m.measurement_id = q.measurement_id
-    JOIN recipe AS r ON r.recipe_id = q.recipe_id
-    JOIN section AS s ON s.section_id = q.section_id
-    WHERE r.recipe_id =". $id ."AND s.section_id = 1
-    ORDER BY q.ingredient_id ASC;") as $row)
-        {?>
+             <h3>Sauce</h3>
+             <?php
+                 foreach ($db->query("SELECT
+                         i.ingredient_name,
+                         q.ingredient_amount,
+                         m.unit,
+		                 s.section_name
+                         FROM ingredients AS i
+                         JOIN recipe_ingredients AS q ON q.ingredient_id = i.ingredient_id
+                         JOIN measurement AS m ON m.measurement_id = q.measurement_id
+                         JOIN recipe AS r ON r.recipe_id = q.recipe_id
+                         JOIN section AS s ON s.section_id = q.section_id
+                         WHERE r.recipe_id =". $id ."AND s.section_id = 2
+                         ORDER BY q.ingredient_id ASC;") as $row)
+                 {?>
         
-        <p><?php echo $row['ingredient_amount'] . $row['unit'] . '<span class="space"> ' . $row['ingredient_name'] . '</span>'  ?><p>    
+                     <p><?php echo $row['ingredient_amount'] . $row['unit'] . '<span class="space"> ' . $row['ingredient_name'] . '</span>'  ?><p>  
 
-  <?php
-   } ?>
-   </div>
-   <div>
-   <h3>Sauce</h3>
-   <?php
-    foreach ($db->query("SELECT
-        i.ingredient_name,
-        q.ingredient_amount,
-        m.unit,
-		s.section_name
-    FROM ingredients AS i
-    JOIN recipe_ingredients AS q ON q.ingredient_id = i.ingredient_id
-    JOIN measurement AS m ON m.measurement_id = q.measurement_id
-    JOIN recipe AS r ON r.recipe_id = q.recipe_id
-    JOIN section AS s ON s.section_id = q.section_id
-    WHERE r.recipe_id =". $id ."AND s.section_id = 2
-    ORDER BY q.ingredient_id ASC;") as $row)
-        {?>
-        
-        <p><?php echo $row['ingredient_amount'] . $row['unit'] . '<span class="space"> ' . $row['ingredient_name'] . '</span>'  ?><p>  
-
-  <?php
-   } ?>
+             <?php
+                 } ?>
          </div
       </div>
-   </div>
+ 
    <?php 
     include_once "footer.php";
  ?>
