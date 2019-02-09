@@ -38,8 +38,8 @@
         
   <?php  }  ?>
      <div id="ingredientList">
-        <h1> Ingredients <h1>
-        <h2> Main Entre</h2>
+        <h2> Ingredients <h2>
+        <h3> Main Entre</h3>
   <?php
      foreach ($db->query("SELECT
         i.ingredient_name,
@@ -55,10 +55,11 @@
     ORDER BY q.ingredient_id ASC;") as $row)
         {?>
         
-        <p><?php echo $row['ingredient_name'] ?><p>    
+        <p><?php echo $row['ingredient_amount'] . $row['unit'] . '<span class="space"> ' . $row['ingredient_name'] . '</span>'  ?><p>    
 
   <?php
    } ?>
+   <h3>Sauce</h3>
    <?php
     foreach ($db->query("SELECT
         i.ingredient_name,
@@ -74,7 +75,7 @@
     ORDER BY q.ingredient_id ASC;") as $row)
         {?>
         
-        <p><?php echo $row['ingredient_name'] ?><p>    
+        <p><?php echo $row['ingredient_amount'] . $row['unit'] . '<span class="space"> ' . $row['ingredient_name'] . '</span>'  ?><p>  
 
   <?php
    } ?>

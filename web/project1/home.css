@@ -69,3 +69,9 @@ main {
     
     padding: 1em;
 }
+#ingredientList {
+    text-align: left;
+}
+.space {
+    margin-left: 2em;
+}
