@@ -2,7 +2,7 @@
    require "config.php";
    $db = getDb();
 
-    foreach ($db->query("SELECT recipe_name, recipe_id FROM recipe WHERE id = 2" ) as $row)
+    foreach ($db->query("SELECT * FROM recipe" ) as $row)
         {
           echo '<p><b>' . $row['recipe_name'] . '</p>';
         }
