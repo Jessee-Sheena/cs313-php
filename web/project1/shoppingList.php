@@ -3,6 +3,7 @@
    include_once "header.php";   
    require "config.php";
    $db=getDb();
+   echo $_SESSION['id'];
    ?>
    <div>
    <h1>Shopping List</h1>
