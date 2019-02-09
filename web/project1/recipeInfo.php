@@ -1,12 +1,14 @@
 <?php 
+   session_start();
    include_once "header.php";
    require "config.php";
    $db=getDb();
-   $id = $_GET['id'];   
+   $_SESSION['id'] = $_GET['id'];  
+   
  ?>
  <div id="infoDiv">
  <?php
-  foreach ($db->query("SELECT * FROM recipe WHERE recipe_id = " .$id ) as $row)
+  foreach ($db->query("SELECT * FROM recipe WHERE recipe_id = " .$_SESSION['id'] ) as $row)
         {?>
         
            <h2><?php echo $row['recipe_name']?></h2>
@@ -53,7 +55,7 @@
                           JOIN measurement AS m ON m.measurement_id = q.measurement_id
                           JOIN recipe AS r ON r.recipe_id = q.recipe_id
                           JOIN section AS s ON s.section_id = q.section_id
-                          WHERE r.recipe_id =". $id ."AND s.section_id = 1
+                          WHERE r.recipe_id =". $_SESSION['id'] ."AND s.section_id = 1
                           ORDER BY q.ingredient_id ASC;") as $row)
                   {?>
         
@@ -76,7 +78,7 @@
                          JOIN measurement AS m ON m.measurement_id = q.measurement_id
                          JOIN recipe AS r ON r.recipe_id = q.recipe_id
                          JOIN section AS s ON s.section_id = q.section_id
-                         WHERE r.recipe_id =". $id ."AND s.section_id = 2
+                         WHERE r.recipe_id =". $_SESSION['id'] ."AND s.section_id = 2
                          ORDER BY q.ingredient_id ASC;") as $row)
                  {?>
         
@@ -95,7 +97,7 @@
            s.step_instruction
            FROM steps AS s
            JOIN recipe AS r ON r.recipe_id = s.recipe_id
-           WHERE r.recipe_id =" . $id .
+           WHERE r.recipe_id =" . $_SESSION['id'] .
            "ORDER BY s.step_number ASC;") as $row)
                  {
                  $count += 1;
