@@ -2,7 +2,7 @@
    include_once "header.php";
    require "config.php";
    $db=getDb();
-   $id = $_POST['id'];
+   $id = $_GET['id'];
    echo $id;
  ?>
  <!-- foreach ($db->query("SELECT * FROM recipe WHERE id = " . $id) as $row)
