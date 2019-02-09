@@ -38,7 +38,7 @@
         
   <?php  }  ?>
      <div id="ingredientList">
-        <h2> Ingredients <h2>
+        <h2> Ingredients </h2>
            <div>
               <h3> Main Entre</h3>
               <?php
