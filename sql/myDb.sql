@@ -61,9 +61,9 @@ SELECT
     ORDER BY q.ingredient_id ASC;
 
 	SELECT
-        s.step_number AS stepNo,
-        s.step_description AS stepDescription
+        s.step_number,
+        s.step_description
     FROM steps AS s
     JOIN recipe AS r ON r.recipe_id = s.recipe_id
     WHERE r.recipe_id = 123
-    ORDER BY s.step_number ASC
+    ORDER BY s.step_number ASC;

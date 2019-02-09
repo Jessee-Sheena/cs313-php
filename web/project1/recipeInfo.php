@@ -86,6 +86,24 @@
                  } ?>
          </div
       </div>
+      <div>
+      <h2>Instructions</h2>
+       <?php
+           $count = 0;
+           foreach ($db->query("SELECT
+           s.step_number,
+           s.step_description
+           FROM steps AS s
+           JOIN recipe AS r ON r.recipe_id = s.recipe_id
+           WHERE r.recipe_id =" . $id .
+           "ORDER BY s.step_number ASC;") as $row)
+                 {?>
+                      count += 1;
+                     <p><?php echo $count . ". ". $row['step_description'] ?><p>  
+
+             <?php
+                 } ?>
+     </div>
  </div>
    <?php 
     include_once "footer.php";
