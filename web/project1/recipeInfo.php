@@ -13,22 +13,22 @@
            <table id="infoTable">
               <thead>
                 <tr>
-                   <td>Cuisine</td>                
-                   <td>Prep Time</td>
-                   <td>Cook Time</td>
-                   <td>Total Time</td>
-                   <td>Serving Size</td>
-                   <td>Calories per Serving</td>
+                   <td class="tableData">Cuisine</td>                
+                   <td class="tableData">Prep Time</td>
+                   <td class="tableData">Cook Time</td>
+                   <td class="tableData">Total Time</td>
+                   <td class="tableData">Serving Size</td>
+                   <td class="tableData">Calories per Serving</td>
                </tr>
              </thead>
            <tbody>
                <tr>
-                   <td><?php echo $row['cuisine'] ?></td>                
-                   <td><?php echo $row['prep_time'] ?></td>
-                   <td><?php echo $row['cook_time'] ?></td>
-                   <td><?php echo $row['total_time'] ?></td>
-                   <td><?php echo $row['serving_size'] ?></td>
-                   <td><?php echo $row['calories'] ?></td>
+                   <td class="tableData"><?php echo $row['cuisine'] ?></td>                
+                   <td class="tableData"><?php echo $row['prep_time'] ?></td>
+                   <td class="tableData"><?php echo $row['cook_time'] ?></td>
+                   <td class="tableData"><?php echo $row['total_time'] ?></td>
+                   <td class="tableData"><?php echo $row['serving_size'] ?></td>
+                   <td class="tableData"><?php echo $row['calories'] ?></td>
                </tr> 
             </tbody>
          </table>
