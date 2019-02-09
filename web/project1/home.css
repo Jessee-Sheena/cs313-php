@@ -81,3 +81,10 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.listSection {
+    border: 1px blue;
+}
+.listHeader {
+    background-color: blue;
+    color: white;
+}
