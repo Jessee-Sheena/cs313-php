@@ -71,12 +71,13 @@ main {
 }
 #ingredientList {
     text-align: left;
+   
     
 }
 .space {
     margin-left: 2em;
 }
 .ingredientSections {
-    display: inline-block;
-    max-width: 50%;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
 }
