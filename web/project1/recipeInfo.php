@@ -5,10 +5,10 @@
    $id = $_GET['id'];   
  
   foreach ($db->query("SELECT * FROM recipe WHERE id = " . $id) as $row)
-        {?>
-          <h2><?php echo $row['recipe_name']?></h2>
-    <img src="<?php echo $row['image'] ?>" alt="food"/>
-    <p><?php echo $row['recipe_description'] ?></p>
+        {
+          echo '<h2><?php echo $row[\'recipe_name\']?></h2>';
+         /* <img src="<?php echo $row['image'] ?>" alt="food"/>
+          <p><?php echo $row['recipe_description'] ?></p>
     <table>
         <thead>
             <tr>
@@ -28,8 +28,8 @@
                 <td><?php echo $row['total_time'] ?></td>
                 <td><?php echo $row['serving_size'] ?></td>
                 <td><?php echo $row['calories'] ?></td>
-            </tr> 
-       <?php }  ?>
+            </tr> */
+       }  ?>
 
   <?php
    include_once "footer.php";
