@@ -3,10 +3,12 @@
    require "config.php";
    $db=getDb();
    $id = $_GET['id'];   
- 
+ ?>
+ <div id="infoDiv">
+ <?php
   foreach ($db->query("SELECT * FROM recipe WHERE recipe_id = " .$id ) as $row)
         {?>
-        <div id="infoDiv">
+        
            <h2><?php echo $row['recipe_name']?></h2>
            <img src="<?php echo $row['image'] ?>" alt="food"/>
            <p><?php echo $row['recipe_description'] ?></p>
@@ -32,7 +34,7 @@
                </tr> 
             </tbody>
          </table>
-    </div>
+    
         
   <?php  }  ?>
      <div id="ingredientList">
@@ -57,6 +59,26 @@
 
   <?php
    } ?>
+   <?php
+    foreach ($db->query("SELECT
+        i.ingredient_name,
+        q.ingredient_amount,
+        m.unit,
+		s.section_name
+    FROM ingredients AS i
+    JOIN recipe_ingredients AS q ON q.ingredient_id = i.ingredient_id
+    JOIN measurement AS m ON m.measurement_id = q.measurement_id
+    JOIN recipe AS r ON r.recipe_id = q.recipe_id
+    JOIN section AS s ON s.section_id = q.section_id
+    WHERE r.recipe_id =". $id ."AND s.section_id = 2
+    ORDER BY q.ingredient_id ASC;") as $row)
+        {?>
+        
+        <p><?php echo $row['ingredient_name'] ?><p>    
+
+  <?php
+   } ?>
+      </div>
    </div>
    <?php 
     include_once "footer.php";
