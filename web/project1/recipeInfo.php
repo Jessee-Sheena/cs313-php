@@ -40,6 +40,7 @@
      <div id="ingredientList">
         <h2> Ingredients </h2>
            <div class="ingredientSections">
+               <div>
               <h3 > Main Entre</h3>
               <?php
                   foreach ($db->query("SELECT
@@ -60,7 +61,8 @@
 
               <?php
                    } ?>
-           </div>
+                </div>
+           
         <div>
              <h3>Sauce</h3>
              <?php
@@ -84,7 +86,7 @@
                  } ?>
          </div
       </div>
- 
+ </div>
    <?php 
     include_once "footer.php";
  ?>
