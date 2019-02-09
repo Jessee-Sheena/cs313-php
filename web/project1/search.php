@@ -26,47 +26,52 @@
  switch ($word) {
 			case 'keyword':
                $keyWord = $_POST['keywords'];
-               foreach ($db->query("SELECT recipe_name, recipe_id FROM recipe WHERE lower(recipe_name) LIKE lower ( '%" . $keyWord ."%')") as $row)
+               foreach ($db->query("SELECT recipe_name, recipe_id, image, recipe_description FROM recipe WHERE lower(recipe_name) LIKE lower ( '%" . $keyWord ."%')") as $row)
                {
-                              
-                echo '<a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a>';
+                 echo '<div class="listSection"><img src="'.$row['image'] . '" alt= "food"/>';                      
+                 echo '<h2 class="listHeader"><a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a></h2>';
+                 echo '<p>'.$row['recipe_description']. '</p></div>';        
                 
                }				
 				break;
 			case 'name':
                $keyWord = $_POST['recipeName'];
-               foreach ($db->query("SELECT recipe_name, recipe_id FROM recipe WHERE lower(recipe_name) = lower ( '" . $keyWord ."')") as $row)
+               foreach ($db->query("SELECT recipe_name, recipe_id, image, recipe_description FROM recipe WHERE lower(recipe_name) = lower ( '" . $keyWord ."')") as $row)
                {
-                              
-                echo '<a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a>';
+                 echo '<div class="listSection"><img src="'.$row['image'] . '" alt= "food"/>';                      
+                 echo '<h2 class="listHeader"><a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a></h2>';
+                 echo '<p>'.$row['recipe_description']. '</p></div>';   
                 
                }			
 				
 				break;
 			case 'cuisine':
 				 $keyWord = $_POST['typeCuisine'];
-               foreach ($db->query("SELECT recipe_name, recipe_id FROM recipe WHERE lower(cuisine) = lower ( '" . $keyWord ."')") as $row)
+               foreach ($db->query("SELECT recipe_name, recipe_id, image, recipe_description FROM recipe WHERE lower(cuisine) = lower ( '" . $keyWord ."')") as $row)
                {
-                              
-                echo '<a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a>';
+                 echo '<div class="listSection"><img src="'.$row['image'] . '" alt= "food"/>';                      
+                 echo '<h2 class="listHeader"><a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a></h2>';
+                 echo '<p>'.$row['recipe_description']. '</p></div>';   
                 
                }	
 				break;
 			case 'cook':
                 $keyWord = $_POST['cookTime'];
-               foreach ($db->query("SELECT recipe_name, recipe_id FROM recipe WHERE cook_time =". $keyWord ) as $row)
+               foreach ($db->query("SELECT recipe_name, recipe_id, image, recipe_description FROM recipe WHERE cook_time =". $keyWord ) as $row)
                {
-                              
-                echo '<a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a>';
+                 echo '<div class="listSection"><img src="'.$row['image'] . '" alt= "food"/>';                      
+                 echo '<h2 class="listHeader"><a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a></h2>';
+                 echo '<p>'.$row['recipe_description']. '</p></div>';   
                 
                }				
 				break;
 			case 'prep':
                 $keyWord = $_POST['prepTime'];
-               foreach ($db->query("SELECT recipe_name, recipe_id FROM recipe WHERE prep_time = " . $keyWord ) as $row)
+               foreach ($db->query("SELECT recipe_name, recipe_id, image, recipe_description FROM recipe WHERE prep_time = " . $keyWord ) as $row)
                {
-                              
-                echo '<a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a>';
+                 echo '<div class="listSection"><img src="'.$row['image'] . '" alt= "food"/>';                      
+                 echo '<h2 class="listHeader"><a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a></h2>';
+                 echo '<p>'.$row['recipe_description']. '</p></div>';   
                 
                }							
 				break;
@@ -78,13 +83,16 @@
                foreach ($db->query("SELECT
                           r.recipe_id,
                           r.recipe_name,
+                          image, 
+                          recipe_description
                           FROM ingredients AS i
                           JOIN recipe_ingredients AS q ON q.ingredient_id = i.ingredient_id
                           JOIN recipe AS r ON r.recipe_id = q.recipe_id
                           WHERElower( i.ingredient_name) = lower ( '" . $ingredient1 ."')") as $row)
                {
-                              
-                echo '<a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a>';
+                 echo '<div class="listSection"><img src="'.$row['image'] . '" alt= "food"/>';                      
+                 echo '<h2 class="listHeader"><a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a></h2>';
+                 echo '<p>'.$row['recipe_description']. '</p></div>';        
                 
                }			
 

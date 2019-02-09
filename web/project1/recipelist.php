@@ -6,7 +6,7 @@
    $keyWord = $_POST['cookTime'];
    foreach ($db->query("SELECT recipe_name, recipe_id, image, recipe_description FROM recipe") as $row)
    {
-       echo '<div class="listSection"><img href="'.$row['image'] . '" alt= "food"/>';                      
+       echo '<div class="listSection"><img src="'.$row['image'] . '" alt= "food"/>';                      
        echo '<h2 class="listHeader"><a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a></h2>';
        echo '<p>'.$row['recipe_description']. '</p></div>';        
    }		
