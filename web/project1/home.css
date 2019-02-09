@@ -84,7 +84,7 @@ main {
 .listSection {
     border: 1px solid darkred;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 70%;
     max-width: 60%;
     margin: auto;
 }
