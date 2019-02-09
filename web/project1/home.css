@@ -90,6 +90,7 @@ main {
 }
 .listSection img {
     max-width: 125px;
+    grid-row: span 2;
 }
 .listHeader {
     background-color: darkred;
