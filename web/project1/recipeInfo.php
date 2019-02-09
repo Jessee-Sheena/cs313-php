@@ -40,7 +40,7 @@
      <div id="ingredientList">
         <h2> Ingredients </h2>
            <div>
-              <h3> Main Entre</h3>
+              <h3 class="ingredientSections"> Main Entre</h3>
               <?php
                   foreach ($db->query("SELECT
                           i.ingredient_name,
@@ -62,7 +62,7 @@
                    } ?>
            </div>
         <div>
-             <h3>Sauce</h3>
+             <h3 class="ingredientSections">Sauce</h3>
              <?php
                  foreach ($db->query("SELECT
                          i.ingredient_name,
