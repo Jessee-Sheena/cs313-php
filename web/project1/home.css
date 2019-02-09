@@ -56,3 +56,8 @@ main {
 #searches, #keys, #names, #cuisineType, #timeCook, #timePrep, .ingredientsList {
     font-size: .7em;
 }
+#infoDiv {
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+}
