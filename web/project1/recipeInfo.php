@@ -4,9 +4,9 @@
    $db=getDb();
    $id = $_GET['id'];   
  
-  foreach ($db->query("SELECT * FROM recipe WHERE id = 2" ) as $row)
+  foreach ($db->query("SELECT * FROM recipe WHERE id = " . $id ) as $row)
         {
-          echo '<h2><?php echo $row[\'recipe_name\']?></h2>';
+          echo "<h2><?php echo". $row['recipe_name'] ."?></h2>";
          /* <img src="<?php echo $row['image'] ?>" alt="food"/>
           <p><?php echo $row['recipe_description'] ?></p>
     <table>
