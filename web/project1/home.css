@@ -82,7 +82,7 @@ main {
     grid-template-columns: 1fr 1fr;
 }
 .listSection {
-    border: 1px blue;
+    border: 1px solid darkred;
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: 60%;
