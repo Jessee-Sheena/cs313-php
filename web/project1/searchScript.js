@@ -24,7 +24,7 @@ $(document).ready(function () {
 				$('#searchInput').html(insert);
 				break;
 			case 'ingredients':
-				insert = '<label for="keys">Enter your ingredients: </label> <input name="ingredient1" class="ingredientsList" type="text"> </label> <input name="ingredient2" class="ingredientsList" type="text"> </label> <input name="ingredient3" class="ingredientsList" type="text"> </label> <input name="ingredient4" class="ingredientsList" type="text"> <button type="submit" id="submitButton">Get Recipes</button>';
+				insert = '<label for="keys">Enter your ingredients: </label> <input name="ingredient1" class="ingredientsList" type="text"> <button type="submit" id="submitButton">Get Recipes</button>';
 				$('#searchInput').html(insert);				
 				break;
 		}
