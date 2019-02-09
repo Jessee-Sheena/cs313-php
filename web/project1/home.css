@@ -78,4 +78,5 @@ main {
 }
 .ingredientSections {
     display: inline-block;
+    max-width: 50%;
 }
