@@ -16,11 +16,11 @@ $(document).ready(function () {
 				$('#searchInput').html(insert);
 				break;
 			case 'cook':
-				insert = '<label for="timeCook">How long do you want it to cook? </label>  <select name="cookTime" id="timeCook"> <option value = "" > Select</option > <option value="20"> less than 20 minutes</option> <option value="30"> 30 minutes </option> <option value="40">40 minutes </option> <option value="1 hour">More than 1 hour</option></select> <button type="submit" id="submitButton">Get Recipes</button>';
+				insert = '<label for="timeCook">How long do you want it to cook? </label>  <select name="cookTime" id="timeCook"> <option value = "" > Select</option > <option value="10"> 10 minutes</option><option value="15"> 15 minutes</option><option value="20"> less than 20 minutes</option> <option value="25"> 25 minutes</option><option value="30"> 30 minutes </option><option value="35"> 35 minutes</option> <option value="40">40 minutes </option> <option value="45"> 45 minutes</option><option value="50"> less than 50 minutes</option><option value="60">60 min</option></select> <button type="submit" id="submitButton">Get Recipes</button>';
 				$('#searchInput').html(insert);
 				break;
 			case 'prep':
-				insert = '<label for="timeCook">How much time do you want to take to prepare your meal? </label>  <select name="prepTime" id="timePrep"> <option value = "" > Select</option > <option value="20"> less than 20 minutes</option> <option value="30"> 30 minutes </option> <option value="40">40 minutes </option> <option value="1 hour">More than 1 hour</option></select> <button type="submit" id="submitButton">Get Recipes</button>';
+				insert = '<label for="timeCook">How much time do you want to take to prepare your meal? </label>  <select name="prepTime" id="timePrep"> <option value = "" > Select</option > <option value="10"> 10 minutes</option><option value="15"> 15 minutes</option><option value="20"> less than 20 minutes</option> <option value="25"> 25 minutes</option><option value="30"> 30 minutes </option><option value="35"> 35 minutes</option> <option value="40">40 minutes </option> <option value="45"> 45 minutes</option><option value="50"> less than 50 minutes</option><option value="60">60 min</option></select> <button type="submit" id="submitButton">Get Recipes</button>';
 				$('#searchInput').html(insert);
 				break;
 			case 'ingredients':
