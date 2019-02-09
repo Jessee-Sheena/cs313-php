@@ -39,6 +39,7 @@
   <?php  }  ?>
      <div id="ingredientList">
         <h2> Ingredients <h2>
+        <div>
         <h3> Main Entre</h3>
   <?php
      foreach ($db->query("SELECT
@@ -59,6 +60,8 @@
 
   <?php
    } ?>
+   </div>
+   <div>
    <h3>Sauce</h3>
    <?php
     foreach ($db->query("SELECT
@@ -79,6 +82,7 @@
 
   <?php
    } ?>
+         </div
       </div>
    </div>
    <?php 

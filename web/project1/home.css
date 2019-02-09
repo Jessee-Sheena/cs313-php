@@ -71,6 +71,7 @@ main {
 }
 #ingredientList {
     text-align: left;
+    display: inline-block;
 }
 .space {
     margin-left: 2em;
