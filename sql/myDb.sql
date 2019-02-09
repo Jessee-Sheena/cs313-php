@@ -62,8 +62,8 @@ SELECT
 
 	SELECT
         s.step_number,
-        s.step_description
+        s.step_instruction
     FROM steps AS s
     JOIN recipe AS r ON r.recipe_id = s.recipe_id
-    WHERE r.recipe_id = 123
+    WHERE r.recipe_id = 2
     ORDER BY s.step_number ASC;
