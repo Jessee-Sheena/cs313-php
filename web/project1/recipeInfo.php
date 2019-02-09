@@ -34,7 +34,11 @@
          </table>
     </div>
         
-     <?php  }  
+  <?php  }  ?>
+     <div id="ingredientList">
+        <h1> Ingredients <h1>
+        <h2> Main Entre</h2>
+  <?php
      foreach ($db->query("SELECT
         i.ingredient_name,
         q.ingredient_amount,
@@ -48,9 +52,12 @@
     WHERE r.recipe_id =". $id ."AND s.section_id = 1
     ORDER BY q.ingredient_id ASC;") as $row)
         {?>
-        <h2> <?php echo $row['section_name']?> </h2>
+        
+        <p><?php echo $row['ingredient_name'] ?><p>    
 
   <?php
-   } 
+   } ?>
+   </div>
+   <?php 
     include_once "footer.php";
  ?>
