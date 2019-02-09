@@ -83,8 +83,15 @@ main {
 }
 .listSection {
     border: 1px blue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 60%;
+    margin: auto;
 }
 .listHeader {
-    background-color: blue;
+    background-color: darkred;
+    color: white;
+}
+.listHeader a {
     color: white;
 }
