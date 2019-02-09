@@ -67,3 +67,36 @@ SELECT
     JOIN recipe AS r ON r.recipe_id = s.recipe_id
     WHERE r.recipe_id = 2
     ORDER BY s.step_number ASC;
+SELECT
+        i.ingredient_name AS ingredientName,
+        q.ingredient_amount AS ingredientQuantity,
+        m.unit AS measurementName,
+		s.section_name AS sectionName,
+	    r.recipe_id,
+        r.recipe_name,
+        r.image, 
+        r.recipe_description
+    FROM ingredients AS i
+    JOIN recipe_ingredients AS q ON q.ingredient_id = i.ingredient_id
+    JOIN measurement AS m ON m.measurement_id = q.measurement_id
+    JOIN recipe AS r ON r.recipe_id = q.recipe_id
+    JOIN section AS s ON s.section_id = q.section_id
+    WHERE r.recipe_id = 2 AND s.section_id = 1
+    ORDER BY q.ingredient_id ASC;
+
+	SELECT
+        i.ingredient_name,
+        q.ingredient_amount,
+        m.unit, 
+		s.section_name, 
+	    r.recipe_id,
+        r.recipe_name,
+        r.image, 
+        r.recipe_description
+    FROM ingredients AS i
+    JOIN recipe_ingredients AS q ON q.ingredient_id = i.ingredient_id
+    JOIN measurement AS m ON m.measurement_id = q.measurement_id
+    JOIN recipe AS r ON r.recipe_id = q.recipe_id
+    JOIN section AS s ON s.section_id = q.section_id
+    WHERE i.ingredient_name = "chicken"
+    ORDER BY q.ingredient_id ASC;

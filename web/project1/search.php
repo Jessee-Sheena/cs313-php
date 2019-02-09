@@ -82,11 +82,12 @@
                           r.recipe_id,
                           r.recipe_name,
                           r.image, 
-                          r.recipe_description
+                          r.recipe_description,
+                          i.ingredient_name
                           FROM ingredients AS i
                           JOIN recipe_ingredients AS q ON q.ingredient_id = i.ingredient_id
                           JOIN recipe AS r ON r.recipe_id = q.recipe_id
-                          WHERE lower(i.ingredient_name) = lower ( '" . $ingredient1 ."')") as $row)
+                          WHERE lower(i.ingredient_name) LIKE= lower ( '%" . $ingredient1 ."%')") as $row)
                {
                  echo '<div class="listSection"><img src="'.$row['image'] . '" alt= "food"/>';                      
                  echo '<h2 class="listHeader"><a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a></h2>';
