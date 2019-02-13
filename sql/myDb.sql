@@ -100,3 +100,11 @@ SELECT
     JOIN section AS s ON s.section_id = q.section_id
     WHERE i.ingredient_name = "chicken"
     ORDER BY q.ingredient_id ASC;
+
+	SELECT
+                         i.ingredient_name
+                         FROM ingredients AS i
+                         JOIN recipe_ingredients AS q ON q.ingredient_id = i.ingredient_id
+                         JOIN recipe AS r ON r.recipe_id = q.recipe_id
+                         WHERE r.recipe_id = 2
+                         ORDER BY q.ingredient_id ASC;

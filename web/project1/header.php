@@ -28,6 +28,7 @@ recipes randomly selected for the week and then your shopping list is automatica
            <li><a href="search.php"> Recipe Search </a></li>
            <li><a href="recipelist.php"> Recipe List </a></li>
            <li><a href="submit.php"> Submit Recipe </a></li>
+           <li><a href="shoppingList.php"> Shopping List</a></li>
            
        </ul>
     </nav>
