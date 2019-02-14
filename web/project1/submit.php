@@ -14,11 +14,11 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
    $cuisine = htmlspecialchars($_POST['cuisine']);
    $recipeImage_path = htmlspecialchars('images/'.$_FILES['recipeImage']['name']);
    
- //  if(preg_match("!image!", $_FILES['recipeImage']['type'])) {
+  if(false) {
      //if (isset($_POST['recipeName'])) {
         // $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image) VALUES ($name, $description, $cookTime, $prepTime, $cuisine, $totalTime, $serving, $calories, $recipeImage_path);");
       
-   // }
+    }
 }
 ?>
   <div id="submitForm">
