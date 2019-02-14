@@ -32,7 +32,7 @@ $(document).ready(function () {
 }); 
 
 $("#submit").click(function() {
-	$.post("submit.php", $("#ingredientForm").serialize(), function (data) {
+	$.post("ingredient.php", $("#ingredientForm").serialize(), function (data) {
 		alert(data);
 		
 		$('#ingredientList').append('<li>${data["ingredient"]}</li>');
