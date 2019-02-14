@@ -34,8 +34,8 @@ $(document).ready(function () {
 $("#submit").click(function() {
 	$.post("submit.php", $("#ingredientForm").serialize(), function (data) {
 		alert(data);
-		data = JSON.parse(data);
-		$('#ingredientList').append('<li>${data["ingredientt"]}</li>');
+		
+		$('#ingredientList').append('<li>${data["ingredient"]}</li>');
 
 	});
 });
