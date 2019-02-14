@@ -76,17 +76,7 @@ $db=getDb();
    }
  ?>
 
- <script>
- $("#submit").click(function() {
-  $.post("submit.php", $("#ingredientForm").serialize(), function(data) {
-    alert(data);
-    data = JSON.parse(data);
-    $('#ingredientList').append('<li>${data["ingredientt"]}</li>');
-   
-    
-  });
-});
- </script>
+
 <?php
    include_once "footer.php";
  ?>
