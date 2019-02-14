@@ -39,6 +39,13 @@ $db=getDb();
                 <input type="submit" />
             </div>
         </form>
+        <form action="submit.php" method="post">
+           <h2> Ingredients: </h2>
+           <input name="ingredient" id ="ingredient" type="text">
+           <input type="submit" id="ingredientSubmit" >
+        </form>
+        <div id="ingredientList">
+        </div>
     </div>
     <?php
     
@@ -59,9 +66,20 @@ $db=getDb();
          $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."');");
       }
    }
+   if(isset($_POST['ingredient'])) {
+      $ingredient = htmlspecialchars($_POST['ingredient']);
+      $db->query("INSERT INTO ingredients (ingredient_name)
+      SELECT '".$ingredient ."'
+      WHERE NOT EXISTS (SELECT * FROM ingredients WHERE ingredient_name = '". $ingredient. "');");
+   }
  ?>
 
-
+ <script>
+ $('#.ingredientSubmit'). click(function() {
+      var ingredient1 = $('#ingredient').val();
+      $('#ingredientList').append('ingredient1');
+});
+ </script>
 <?php
    include_once "footer.php";
  ?>
