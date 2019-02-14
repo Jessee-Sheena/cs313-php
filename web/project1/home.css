@@ -105,3 +105,6 @@ main {
 .listSection p {
     padding-left: 1em;
 }
+#recipeForm {
+    display: block;
+}

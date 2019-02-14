@@ -3,7 +3,7 @@
 ?>
   <div id="submitForm">
         <h1>Recipe Submission</h1>
-        <form action="submit.php" method="post">
+        <form action="submit.php" method="post" id="recipeForm">
             <label for="recipeName">Recipe Name: </label>
             <input type="text" id="recipeName" name="recipeName" required />
             <label for="recipeDescription">Description</label>
