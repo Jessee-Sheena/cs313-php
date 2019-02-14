@@ -108,3 +108,7 @@ main {
 #recipeForm {
     display: grid;
 }
+#submitForm {
+    max-width: 60%;
+    margin: auto;
+}
