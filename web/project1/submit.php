@@ -3,10 +3,9 @@ session_start();
 include_once "header.php";
 require "config.php";
 $db = getDb();
-print_r($_FILES);
-if($_SERVER['REQUEST_METHOD']=='POST') {
-   
+
    $name = htmlspecialchars($_POST['recipeName']);
+   print_r($name);
    $description = htmlspecialchars($_POST['recipeDescription']);
    $cookTime = htmlspecialchars($_POST['cook_Time']);
    $prepTime = htmlspecialchars($_POST['prep_Time']);
@@ -16,12 +15,12 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
    $cuisine = htmlspecialchars($_POST['cuisine']);
    $recipeImage_path = htmlspecialchars('images/'.$_FILES['recipeImage']['name']);
    
-  //if(preg_match("!image!", $_FILES['recipeImage']['type'])) {
-     //if (isset($_POST['recipeName'])) {
+  // if(preg_match("!image!", $_FILES['recipeImage']['type'])) {
+  //   if (copy($_FILES['recipeImage']['tmp_name'], $recipeImage_path)) {
         // $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image) VALUES ($name, $description, $cookTime, $prepTime, $cuisine, $totalTime, $serving, $calories, $recipeImage_path);");
       
-    //}
-}
+   // }
+
 ?>
   <div id="submitForm">
         <h1>Recipe Submission</h1>
