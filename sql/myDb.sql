@@ -108,3 +108,4 @@ SELECT
                          JOIN recipe AS r ON r.recipe_id = q.recipe_id
                          WHERE r.recipe_id = 2
                          ORDER BY q.ingredient_id ASC;
+INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image) VALUES (
