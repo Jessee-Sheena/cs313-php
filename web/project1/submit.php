@@ -7,12 +7,12 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
    $name = htmlspecialchars($_POST['recipeName']);
    $description = htmlspecialchars($_POST['recipeDescription']);
    $cookTime = htmlspecialchars($_POST['cook_Time']);
-  /* $prepTime = htmlspecialchars($_POST['prep_Time']);
+   $prepTime = htmlspecialchars($_POST['prep_Time']);
    $totalTime = htmlspecialchars($_POST['total_Time']);
    $serving = htmlspecialchars($_POST['serving_size']);
    $calories = htmlspecialchars($_POST['calories']);
    $cuisine = htmlspecialchars($_POST['cuisine']);
-   $recipeImage_path = htmlspecialchars('images/'.$_FILES['recipeImage']['name']);
+  /* $recipeImage_path = htmlspecialchars('images/'.$_FILES['recipeImage']['name']);
    
    if(preg_match("!image!", $_FILES['recipeImage']['type'])) {
       if (copy($_FILES['recipeImage']['tmp_name'], $recipeImage_path)) {
