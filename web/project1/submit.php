@@ -39,12 +39,14 @@ $db=getDb();
                 <input type="submit" />
             </div>
         </form>
-        <form action="submit.php" method="post">
+        <form action="submit.php" method="post" id="ingredientForm">
            <h2> Ingredients: </h2>
            <input name="ingredient" id ="ingredient" type="text">
            <input type="submit" id="ingredientSubmit" >
         </form>
-        <div id="ingredientList">
+        <div id="ingredientListDiv" >
+         <ul id="ingredientList">
+         </ul>
         </div>
     </div>
     <?php
@@ -75,9 +77,14 @@ $db=getDb();
  ?>
 
  <script>
- $('#.ingredientSubmit').click(function() {
-      var ingredient1 = $('#ingredient').val();
-      $('#ingredientList').append('ingredient1');
+ $("#submit").click(function() {
+  $.post("submit.php", $("#ingredientForm").serialize(), function(data) {
+    alert(data);
+    data = JSON.parse(data);
+    $('#ingredientList').append('<li>${data["ingredientt"]}</li>');
+   
+    
+  });
 });
  </script>
 <?php
