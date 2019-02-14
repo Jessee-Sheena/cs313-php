@@ -53,7 +53,9 @@ $db=getDb();
    $recipeImage_path = htmlspecialchars('images/'.$_FILES['recipeImage']['name']);
    print_r($_FILES);
   if(preg_match("!image!", $_FILES['recipeImage']['type'])) {
+       print_r('this is true');
     if (copy($_FILES['recipeImage']['tmp_name'], $recipeImage_path)) {
+         print_r('copy happened');
          $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."');");
       }
    }
