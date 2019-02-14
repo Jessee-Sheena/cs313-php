@@ -106,5 +106,5 @@ main {
     padding-left: 1em;
 }
 #recipeForm {
-    display: block;
+    display: grid;
 }
