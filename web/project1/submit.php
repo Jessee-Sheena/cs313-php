@@ -3,8 +3,9 @@ session_start();
 include_once "header.php";
 require "config.php";
 $db = getDb();
-if($_SERVER['REQUEST_METHOD']=='POST') {
 print_r($_FILES);
+if($_SERVER['REQUEST_METHOD']=='POST') {
+   
    $name = htmlspecialchars($_POST['recipeName']);
    $description = htmlspecialchars($_POST['recipeDescription']);
    $cookTime = htmlspecialchars($_POST['cook_Time']);
