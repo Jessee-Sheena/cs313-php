@@ -39,7 +39,7 @@ $db=getDb();
                 <input type="submit" />
             </div>
         </form>
-        <form action="ingredient.php" method="post" id="ingredientForm">
+        <form  method="post" id="ingredientForm">
            <h2> Ingredients: </h2>
            <input name="ingredient" id ="ingredient" type="text">
            <button type="button" id="ingredientSubmit" >Add ingredient </button>
