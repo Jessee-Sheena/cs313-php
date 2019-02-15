@@ -34,13 +34,14 @@ $(document).ready(function () {
 $(document).ready(function () {
 	$("#ingredientSubmit").click(function () {
 		var query = $('#ingredient').val();
-		console.log(query);
+		
 		$.ajax({
 			url: "ingredient.php",
 			data: query,
 			type: "POST",
 			success: function (data) {
-				var ingredients = "'<li>" + data + "</li>'";
+				console.log(data);
+				var ingredients = "<li>" + data + "</li>";
 				$('#ingredientList').append(ingredients);
 			}
 		});
