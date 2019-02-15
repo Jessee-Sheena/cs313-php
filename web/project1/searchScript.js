@@ -33,10 +33,10 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 	$("#ingredientSubmit").click(function () {
-		var query = 'ingredient=' + $('#ingredient').val();		
+		var query = $('#ingredient').val();		
 		$.ajax({
 			url: "ingredient.php",
-			data: query,
+			data: { 'ingredient': query},
 			type: "POST",
 			success: function (data) {
 				console.log(data);
