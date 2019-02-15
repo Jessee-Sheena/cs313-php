@@ -72,7 +72,7 @@ echo "<h2>What is going to happen</h2>";
        
     if (copy($_FILES['recipeImage']['tmp_name'], $recipeImage_path)) {
         
-         $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."') RETURNING recipe_id;");
+         $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."') RETURNING id;");
          $_SESSION['tempId'] = $db->lastInstertId('recipe_id');
         
    }
