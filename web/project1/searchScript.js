@@ -36,7 +36,7 @@ $(document).ready(function () {
 		var query = $('#ingredient').val();
 		console.log(query);
 		$.ajax({
-			url: "submit.php",
+			url: "ingredient.php",
 			data: query,
 			type: "POST",
 			success: function (data) {
