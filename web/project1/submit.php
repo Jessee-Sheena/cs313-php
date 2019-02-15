@@ -3,6 +3,13 @@ session_start();
 include_once "header.php";
 require "config.php";
 $db=getDb();
+echo "<h2>What is going to happen</h2>";
+         if(empty($_SESSION['tempId'])) {
+          echo "<h2>THIS VARIABLE IS EMPTY!</h2>";
+            }
+          else {
+           echo "<h2>This vairable has something in it</h2>";}
+      
 
 
 ?>
@@ -74,12 +81,6 @@ $db=getDb();
     
 
 <?php
- echo "<h2>What is going to happen</h2>";
-         if(empty($_SESSION['tempId'])) {
-          echo "<h2>THIS VARIABLE IS EMPTY!</h2>";
-            }
-          else {
-           echo "<h2>This vairable has something in it</h2>";}
-      
+ 
    include_once "footer.php";
  ?>
