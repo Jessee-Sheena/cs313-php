@@ -31,7 +31,7 @@ $(document).ready(function () {
 	});
 }); 
 
-$("#submit").click(function() {
+$("#submit").click(function () {
 	$.ajax({
 		url: "",
 		data: query,
@@ -40,4 +40,5 @@ $("#submit").click(function() {
 			console.log(data);
 			$('#ingredientList').html(data);
 		}
-});
+	});
+})
