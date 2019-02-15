@@ -32,10 +32,12 @@ $(document).ready(function () {
 }); 
 
 $("#submit").click(function() {
-	$.post("ingredient.php", $("#ingredientForm").serialize(), function (data) {
-		alert(data);
-		
-		$('#ingredientList').append('<li>${data["ingredient"]}</li>');
-
-	});
+	$.ajax({
+		url: "",
+		data: query,
+		type: "POST",
+		success: function (data) {
+			console.log(data);
+			$('#ingredientList').html(data);
+		}
 });

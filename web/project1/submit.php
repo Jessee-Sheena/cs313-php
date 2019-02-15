@@ -39,7 +39,7 @@ $db=getDb();
                 <input type="submit" />
             </div>
         </form>
-        <form action="ingredient.php" method="post" id="ingredientForm">
+        <form action="submit.php" method="post" id="ingredientForm">
            <h2> Ingredients: </h2>
            <input name="ingredient" id ="ingredient" type="text">
            <input type="submit" id="ingredientSubmit" >
