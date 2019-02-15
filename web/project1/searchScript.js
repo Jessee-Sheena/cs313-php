@@ -35,7 +35,7 @@ $(document).ready(function () {
 	$("#ingredientSubmit").click(function () {
 		var query = $('#ingredient').val();
 		console.log(query);
-		$.ajax({
+		/*$.ajax({
 			url: "submit.php",
 			data: $('#ingredient').val(),
 			type: "POST",
@@ -43,6 +43,6 @@ $(document).ready(function () {
 				console.log(data);
 				$('#ingredientList').html(data);
 			}
-		});
+		});*/
 	});
 });
