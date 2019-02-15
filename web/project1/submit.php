@@ -67,6 +67,10 @@ $db=getDb();
         
          $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."') RETURNING recipe_id;");
          $_SESSION['tempId'] = $db->lastInstertId();
+         if(empty($_SESSION['tempId'])) {
+          echo "THIS VARIABLE IS EMPTY!";}
+          else {
+           echo "This vairable has something in it";}
       }
    }
 ?>
