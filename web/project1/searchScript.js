@@ -40,8 +40,8 @@ $(document).ready(function () {
 			data: query,
 			type: "POST",
 			success: function (data) {
-				console.log(data);
-				$('#ingredientList').html(data);
+				var ingredients = "'<li>" + data + "</li>'";
+				$('#ingredientList').append(ingredients);
 			}
 		});
 	});
