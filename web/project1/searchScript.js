@@ -32,13 +32,5 @@ $(document).ready(function () {
 }); 
 
 $("#submit").click(function () {
-	$.ajax({
-		url: "",
-		data: query,
-		type: "POST",
-		success: function (data) {
-			console.log(data);
-			$('#ingredientList').html(data);
-		}
-	});
+	console.log($('#ingredient').val());
 })
