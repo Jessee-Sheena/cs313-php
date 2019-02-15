@@ -1,4 +1,6 @@
 <?php 
+session_start();
+echo $_SESSION['tempId'];
 require "config.php";
 $db=getDb();
 
