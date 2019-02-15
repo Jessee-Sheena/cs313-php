@@ -50,9 +50,6 @@ $db=getDb();
         </div>
     </div>
     <?php 
-start_session();
-require "config.php";
-$db=getDb();
 
  $name = htmlspecialchars($_POST['recipeName']);
    $description = htmlspecialchars($_POST['recipeDescription']);
@@ -68,8 +65,8 @@ $db=getDb();
        
     if (copy($_FILES['recipeImage']['tmp_name'], $recipeImage_path)) {
         
-         $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."'); RETURNING recipe_id INTO id");
-         $_SESSION['tempId'] = id;
+         $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."'); RETURNING recipe_id INTO $id");
+         $_SESSION['tempId'] = $id;
       }
    }
 ?>
