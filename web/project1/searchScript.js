@@ -31,6 +31,14 @@ $(document).ready(function () {
 	});
 }); 
 
-$("#submit").click(function () {
-	console.log($('#ingredient').val());
-})
+$("#ingredientSubmit").click(function () {
+	$.ajax({
+		url: "submit.php",
+		data: $('#ingredient').val(),
+		type: "POST",
+		success: function (data) {
+			console.log(data);
+			$('#ingredientList').html(data);
+		}
+	});
+});

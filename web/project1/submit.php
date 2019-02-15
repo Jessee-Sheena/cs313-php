@@ -42,7 +42,7 @@ $db=getDb();
         <form action="submit.php" method="post" id="ingredientForm">
            <h2> Ingredients: </h2>
            <input name="ingredient" id ="ingredient" type="text">
-           <input type="submit" id="ingredientSubmit" >
+           <button type="button" id="ingredientSubmit" >Add ingredient </button>
         </form>
         <div id="ingredientListDiv" >
          <ul id="ingredientList">
