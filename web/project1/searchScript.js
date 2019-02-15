@@ -35,14 +35,14 @@ $(document).ready(function () {
 	$("#ingredientSubmit").click(function () {
 		var query = $('#ingredient').val();
 		console.log(query);
-		/*$.ajax({
+		$.ajax({
 			url: "submit.php",
-			data: $('#ingredient').val(),
+			data: query,
 			type: "POST",
 			success: function (data) {
 				console.log(data);
 				$('#ingredientList').html(data);
 			}
-		});*/
+		});
 	});
 });
