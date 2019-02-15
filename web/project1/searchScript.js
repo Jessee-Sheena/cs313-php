@@ -31,14 +31,18 @@ $(document).ready(function () {
 	});
 }); 
 
-$("#ingredientSubmit").click(function () {
-	$.ajax({
-		url: "submit.php",
-		data: $('#ingredient').val(),
-		type: "POST",
-		success: function (data) {
-			console.log(data);
-			$('#ingredientList').html(data);
-		}
+$(document).ready(function () {
+	$("#ingredientSubmit").click(function () {
+		var query = $('#ingredient').val();
+		console.log(query);
+		$.ajax({
+			url: "submit.php",
+			data: $('#ingredient').val(),
+			type: "POST",
+			success: function (data) {
+				console.log(data);
+				$('#ingredientList').html(data);
+			}
+		});
 	});
 });
