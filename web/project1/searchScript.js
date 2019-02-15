@@ -33,7 +33,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 	$("#ingredientSubmit").click(function () {
-		var query = $('#ingredient').val();		
+		var query = 'ingredient=' + $('#ingredient').val();		
 		$.ajax({
 			url: "ingredient.php",
 			data: query,
