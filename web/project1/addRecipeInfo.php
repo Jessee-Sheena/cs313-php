@@ -1,5 +1,5 @@
 <?php 
-start_session();
+/*start_session();
 require "config.php";
 $db=getDb();
 
@@ -11,7 +11,7 @@ $db=getDb();
    $serving = htmlspecialchars($_POST['serving_size']);
    $calories = htmlspecialchars($_POST['calories']);
    $cuisine = htmlspecialchars($_POST['cuisine']);
-   $recipeImage_path = htmlspecialchars('images/'.$_FILES['recipeImage']['name']);
+   $recipeImage_path = htmlspecialchars('images/'.$_FILES['recipeImage']['name']);*/
   
  /* if(preg_match("!image!", $_FILES['recipeImage']['type'])) {
        
