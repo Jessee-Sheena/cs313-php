@@ -4,7 +4,7 @@ echo $_SESSION['tempId'];
 require "config.php";
 $db=getDb();
 
-print_r($_POST['ingredient']);
+
  if(isset($_POST['ingredient'])) {
       $ingredient = htmlspecialchars($_POST['ingredient']);
       $db->query("INSERT INTO ingredients (ingredient_name)
