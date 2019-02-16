@@ -114,3 +114,5 @@ WHERE NOT EXISTS (SELECT * FROM ingredients WHERE ingredient_name = 'cumin');
 INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image) VALUES ('name', 'name', '2', '2', 'american', '20', '6', '6', 'recipepath') RETURNING recipe_id INTO id;
 INSERT INTO recipe_ingredients (ingredient_id, recipe_id, measurement_id, ingredient_amount )
 VALUES ('1', '1', '1', '1');
+INSERT INTO steps (recipe_id, step_number, step_instruction)
+      VALUES ( '1', ' 1', ' slkjdf');
