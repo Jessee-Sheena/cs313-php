@@ -48,11 +48,7 @@ $(document).ready(function () {
 	});
 });
 $(document).ready(function () {	
-	//$('#recipeImage').on('change', prepareUpload);
 	
-	//function prepareUpload(event) {
-	//	files = event.target.files;
-	//}
 	$("#recipeFormSubmit").click(function () {
 		var name = $('#recipeName').val();
 		var descript = $('#recipeDescription').val();
@@ -72,7 +68,7 @@ $(document).ready(function () {
 				console.log(data);
 				alert(data);
 				
-			},
+			}
 			
 		});
 	});
