@@ -6,7 +6,7 @@ $db=getDb();
 
 foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT 1;") as $row)
 {
-              // $_SESSION['tempId'] = $row['recipe_id'];        
+               $_SESSION['tempId'] = $row['recipe_id'];        
                 
  }	
 
@@ -16,6 +16,10 @@ foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT
       $db->query("INSERT INTO ingredients (ingredient_name)
       SELECT '".$ingredient ."'
       WHERE NOT EXISTS (SELECT * FROM ingredients WHERE ingredient_name = '". $ingredient. "');");
+
+      foreach ($db->query("SELECT ingredient_id WHERE ingredient_name ='". $ingredient . "';")as $row) {
+           $_SESSION['ingredientID'] = $row['ingredient_id'];
+        }
    }
    if(isset($_POST['measurement'])) {
       $unit = htmlspecialchars($_POST['measurement']);
@@ -23,6 +27,18 @@ foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT
       $db->query("INSERT INTO measurement (unit)
       SELECT '".$unit ."'
       WHERE NOT EXISTS (SELECT * FROM measurement WHERE unit = '". $unit. "');");
+
+      foreach ($db->query("SELECT measurement_id FROM measurement WHERE unit ='". $unit . "';")as $row) {
+           $_SESSION['measurementID'] = $row['measurement_id'];
+        }
    }
+  /* if(isset($_POST['amount'])) {
+      $quantity = htmlspecialchars($_POST['amount']);
+      echo $quantity;
+      $db->query("INSERT INTO recipe_ingredients (ingredient_id, recipe_id, section_id, measurement_id, ingredient_amount )
+      VALUES (
+      WHERE NOT EXISTS (SELECT * FROM measurement WHERE unit = '". $unit. "');");
+   }*/
+
  
 ?>
