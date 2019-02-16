@@ -74,7 +74,7 @@ echo "<h2>What is going to happen</h2>";
         
          $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."') RETURNING id;");
          $tempId= $db->lastInstertId();
-        echo"hello";
+       
    }
    }
 ?>
