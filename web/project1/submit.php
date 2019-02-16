@@ -37,8 +37,9 @@ $db=getDb();
             <div id="image">
                 <label for="recipeImage">Image upload: </label>
                 <input type="file" name="recipeImage" id="recipeImage" accept="image/*" required />
-                <button type="button" id="recipeFormSubmit"/>add recipe</button>
+                
             </div>
+            <button type="button" id="recipeFormSubmit"/>add recipe</button>
         </form>
         <form  method="post" id="ingredientForm">
            <h2> Ingredients: </h2>
