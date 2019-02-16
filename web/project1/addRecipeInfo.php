@@ -19,14 +19,14 @@ $db=getDb();
         
          $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."'); RETURNING recipe_id as id");
          $db->execute();
-         $_SESSION['tempId'] = $db->lastInsertId();
+        /* $_SESSION['tempId'] = $db->lastInsertId();
          echo $db->lastInsertId();
          echo "<h2>What is going to happen</h2>";
          if(empty($_SESSION['tempId'])) {
           echo "<h2>THIS VARIABLE IS EMPTY!</h2>";
             }
           else {
-           echo "<h2>This vairable has something in it</h2>";}
+           echo "<h2>This vairable has something in it</h2>";}*/
       
          
       }
