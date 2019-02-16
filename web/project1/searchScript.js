@@ -61,7 +61,7 @@ $(document).ready(function () {
 
 		$.ajax({
 			url: "addRecipeInfo.php",
-			data: { 'recipeName': name, 'recipeDescription': descript, 'cook_Time': cTime, 'prep_Time': pTime, 'total_time': tTime, 'serving_size': ss, 'calories': cal, 'cuisine': cuis, 'recipeImage': recipeIm, },
+			data: { 'recipeName': name, 'recipeDescription': descript, 'cook_Time': cTime, 'prep_Time': pTime, 'total_time': tTime, 'serving_size': ss, 'calories': cal, 'cuisine': cuis, 'recipeImage': recipeIm },
 			type: "POST",
 			success: function (data) {
 				console.log(data);
