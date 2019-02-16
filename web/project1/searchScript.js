@@ -31,6 +31,11 @@ $(document).ready(function () {
 		}
 	});
 }); 
+$(document).ready(function () {
+	$("#theRecipe").click(function () {
+		$("#ingredientFormDiv").css("display", "block");
+	});
+});
 
 $(document).ready(function () {
 	$("#stepsSubmit").click(function () {
@@ -64,6 +69,7 @@ $(document).ready(function () {
 				alert(data);
 				var ingredients = "<li>" + data + "</li>";
 				$('#ingredientList').append(ingredients);
+				$('#stepsFormDiv').css("display", "block");
 			}
 		});
 	});

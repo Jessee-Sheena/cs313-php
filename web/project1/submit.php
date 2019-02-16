@@ -36,9 +36,10 @@ $db=getDb();
             <div id="image">
                 <label for="recipeImage">Image upload: </label>
                 <input type="file" name="recipeImage" id="recipeImage" accept="image/*" required />
-                <input type="submit" />
+                <input type="submit" id="theRecipe"/>
             </div>
         </form>
+        <div id="ingredientFormDiv">
         <form  method="post" id="ingredientForm">
            <h2> Ingredients: </h2>
            <label for="ingredient">Ingredient name: </label>
@@ -49,10 +50,12 @@ $db=getDb();
            <input name="measurement" id="measurement" type ="text" required>
            <button type="button" id="ingredientSubmit" >Add ingredient </button>
         </form>
+        </div>
         <div id="ingredientListDiv" >
          <ul id="ingredientList">
          </ul>
         </div>
+        <div id="stepsFormDiv">
         <form  method="post" id="stepsForm">
            <h2> Instructions: </h2>
            <label for="stepNum"> Step Number: </label>
@@ -61,6 +64,7 @@ $db=getDb();
            <textarea rows="4" cols="32" name="steps" id="steps" required></textarea>
            <button type="button" id="stepsSubmit" >Add Steps </button>
         </form>
+        </div>
         <div id="stepsListDiv" >
          <ul id="stepList">
          </ul>

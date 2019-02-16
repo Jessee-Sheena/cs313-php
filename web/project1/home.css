@@ -112,3 +112,9 @@ main {
     max-width: 60%;
     margin: auto;
 }
+#ingredientFormDiv {
+    display: none;
+}
+#stepsFormDiv {
+    display: none;
+}
