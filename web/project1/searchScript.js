@@ -42,7 +42,7 @@ $(document).ready(function () {
 			data: {'ingredient': ing},
 			type: "POST",
 			success: function (data) {
-				console.log(data);
+				alert(data);
 				var ingredients = "<li>" + data + "</li>";
 				$('#ingredientList').append(ingredients);
 			}
