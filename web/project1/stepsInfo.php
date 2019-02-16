@@ -3,8 +3,8 @@ session_start();
 require "config.php";
 $db=getDb();
 if(isset($_POST['steps'])) {
-      $step = htmlspecialchars($_POST['ingredient']);  
-      $stepNum = htmlspecialchars($_POST['number']);      
+      $step = htmlspecialchars($_POST['steps']);  
+      $stepNum = htmlspecialchars($_POST['stepNum']);      
       $db->query("INSERT INTO steps (recipe_id, step_number, step_instructions)
       VALUES ( '". $_SESSION['recipeId'] ."', ' " . $stepNum ."', ' " . $step . "' )");
       echo $stepNum . " " . $step;

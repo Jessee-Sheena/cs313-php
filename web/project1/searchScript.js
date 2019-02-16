@@ -35,11 +35,11 @@ $(document).ready(function () {
 $(document).ready(function () {
 	$("#stepsSubmit").click(function () {
 		var step = $('#steps').val();	
-		
+		var num = $('#stepNum').val();
 		$.ajax({
-			url: "steps.php",
+			url: "stepsInfo.php",
 			data: {
-				'steps': step},
+				'steps': step, 'stepNum': num},
 			type: "POST",
 			success: function (data) {
 				alert(data);
