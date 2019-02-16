@@ -4,7 +4,7 @@ session_start();
 require "config.php";
 $db=getDb();
 $ingredient = "word";
-$unit + "people";
+$unit = "people";
 $measurement;
 //foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT 1;") as $row)
 //{
@@ -25,5 +25,5 @@ $measurement;
       SELECT '".$unit ."'
       WHERE NOT EXISTS (SELECT * FROM measurement WHERE unit = '". $unit. "');");
    }
-  echo $ingredient + " " + $unit;
+ // echo $ingredient + " " + $unit;
 ?>
