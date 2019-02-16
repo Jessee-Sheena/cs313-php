@@ -3,7 +3,7 @@ session_start();
 
 require "config.php";
 $db=getDb();
-foreach ($db->prepare("SELECT recipe_id FROM recipe ORDER BY id DESC LIMIT 1") as $row); {
+foreach ($db->prepare("SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT 1") as $row); {
         $_SESSION['tempId'] = $row['recipe_id'];
 }
 
