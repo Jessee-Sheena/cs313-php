@@ -3,9 +3,11 @@ session_start();
 
 require "config.php";
 $db=getDb();
-foreach ($db->prepare("SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT 1") as $row); {
-       // $_SESSION['tempId'] = $row['recipe_id'];
-}
+foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT 1;") as $row)
+{
+               $tmp = $row['recipe_id'];        
+                
+ }	
 
  if(isset($_POST['ingredient'])) {
       $ingredient = htmlspecialchars($_POST['ingredient']);
