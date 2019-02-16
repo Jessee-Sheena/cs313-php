@@ -6,7 +6,7 @@ $db=getDb();
 
 foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT 1;") as $row)
 {
-               $_SESSION['tempId'] = $row['recipe_id'];        
+               $_SESSION['recipeId'] = $row['recipe_id'];        
                 
  }	
 
@@ -34,13 +34,13 @@ foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT
            echo $_SESSION['measurementID'];
         }
    }
-  /* if(isset($_POST['amount'])) {
+  if(isset($_POST['amount'])) {
       $quantity = htmlspecialchars($_POST['amount']);
       echo $quantity;
-      $db->query("INSERT INTO recipe_ingredients (ingredient_id, recipe_id, section_id, measurement_id, ingredient_amount )
-      VALUES (
-      WHERE NOT EXISTS (SELECT * FROM measurement WHERE unit = '". $unit. "');");
-   }*/
-
+      $db->query("INSERT INTO recipe_ingredients (ingredient_id, recipe_id, measurement_id, ingredient_amount )
+      VALUES ('". $_SESSION['ingredientID'] . "', '" . $_SESSION['recipeId'] . "', '" . $_SESSION['measurementID'] . "', '" . $quantity."');");
+       echo $_SESSION['ingredientID'] + ", " + $_SESSION['recipeId'] + ", " + $_SESSION['measurementID'] + ", " + $quantity;
+   }
+  
  
 ?>
