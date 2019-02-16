@@ -53,6 +53,18 @@ $db=getDb();
          <ul id="ingredientList">
          </ul>
         </div>
+        <form  method="post" id="stepsForm">
+           <h2> Instructions: </h2>
+           <label for="stepNum"> Step Number: </label>
+           <input type="number" name="stepNum" id="stepNum" required>
+           <label for="steps"> Step Instructions </label>
+           <textarea rows="4" cols="32" name="steps" id="steps" required></textarea>
+           <button type="button" id="stepsSubmit" >Add Steps </button>
+        </form>
+        <div id="stepsListDiv" >
+         <ul id="stepList">
+         </ul>
+        </div>
     </div>
     <?php 
    $name = htmlspecialchars($_POST['recipeName']);

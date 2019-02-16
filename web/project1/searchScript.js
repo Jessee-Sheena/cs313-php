@@ -34,13 +34,31 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 	$("#ingredientSubmit").click(function () {
-		var ing = $('#ingredient').val();	
+		var step = $('#steps').val();	
+		
+		$.ajax({
+			url: "steps.php",
+			data: {
+				'steps': step},
+			type: "POST",
+			success: function (data) {
+				alert(data);
+				var ingredients = "<li>" + data + "</li>";
+				$('#stepList').append(ingredients);
+			}
+		});
+	});
+});
+$(document).ready(function () {
+	$("#stepsSubmit").click(function () {
+		var ing = $('#ingredient').val();
 		var quantity = $('#amount').val();
-		var unit= $('#measurement').val();
+		var unit = $('#measurement').val();
 		$.ajax({
 			url: "ingredient.php",
 			data: {
-				'ingredient': ing, 'amount': quantity, 'measurement': unit},
+				'ingredient': ing, 'amount': quantity, 'measurement': unit
+			},
 			type: "POST",
 			success: function (data) {
 				alert(data);
