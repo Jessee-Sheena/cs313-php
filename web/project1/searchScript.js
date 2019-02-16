@@ -34,12 +34,13 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 	$("#ingredientSubmit").click(function () {
-		var  = $('#ingredient').val();	
+		var ing = $('#ingredient').val();	
 		var quantity = $('#amount').val();
 		var unit= $('#measurement').val();
 		$.ajax({
 			url: "ingredient.php",
-			data: {'ingredient': ing},
+			data: {
+				'ingredient': ing, 'amount': quantity, 'measurement': unit},
 			type: "POST",
 			success: function (data) {
 				alert(data);
