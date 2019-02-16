@@ -46,3 +46,28 @@ $(document).ready(function () {
 		});
 	});
 });
+$(document).ready(function () {
+	$("#recipeFormSubmit").click(function () {
+		var name = $('#recipeName').val();
+		var descript = $('#recipeDescription').val();
+		var cTime = $('#cook_Time').val();
+		var pTime = $('#prep_Time').val();
+		var tTime = $('#total_time').val();
+		var ss = $('#serving_size').val();
+		var cal = $('#calories').val();
+		var cuis = $('#cuisine').val();
+		var recipeIm = $('#recipeImage').val();
+
+
+		$.ajax({
+			url: "addRecipeInfo.php",
+			data: { 'recipeName': name, 'recipeDescription': descript, 'cook_Time': cTime, 'prep_Time': pTime, 'total_time': tTime, 'serving_size': ss, 'calories': cal, 'cuisine': cuis, 'recipeImage': recipeIm, },
+			type: "POST",
+			success: function (data) {
+				console.log(data);
+				
+			}
+		});
+	});
+});
+

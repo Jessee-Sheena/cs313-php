@@ -111,4 +111,4 @@ SELECT
 INSERT INTO ingredients (ingredient_name)
 SELECT 'cumin'
 WHERE NOT EXISTS (SELECT * FROM ingredients WHERE ingredient_name = 'cumin');
-INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image) VALUES ('name', 'name', '2', '2', 'american', '20', '6', '6', 'recipepath') RETURNING id
+INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image) VALUES ('name', 'name', '2', '2', 'american', '20', '6', '6', 'recipepath') RETURNING recipe_id INTO id;
