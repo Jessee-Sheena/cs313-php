@@ -25,7 +25,7 @@ foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT
       $unit = htmlspecialchars($_POST['measurement']);
       $quantity = htmlspecialchars($_POST['amount']);
       $ingredient = htmlspecialchars($_POST['ingredient']);
-      echo $ingredient . " " . $quantity . " " . $unit;
+      echo $ingredient ;//. " " . $quantity . " " . $unit;
       $db->query("INSERT INTO measurement (unit)
       SELECT '".$unit ."'
       WHERE NOT EXISTS (SELECT * FROM measurement WHERE unit = '". $unit. "');");
