@@ -13,7 +13,7 @@ $db=getDb();
    $cuisine = htmlspecialchars($_POST['cuisine']);
    $recipeImage_path = htmlspecialchars('images/'.$_FILES['recipeImage']['name']);
   
- /* if(preg_match("!image!", $_FILES['recipeImage']['type'])) {
+ if(preg_match("!image!", $_FILES['recipeImage']['type'])) {
        
     if (copy($_FILES['recipeImage']['tmp_name'], $recipeImage_path)) {
         
