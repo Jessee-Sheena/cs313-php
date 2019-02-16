@@ -1,8 +1,8 @@
 <?php 
-start_session();
+session_start();
+
 require "config.php";
 $db=getDb();
-
 /* $name = htmlspecialchars($_POST['recipeName']);
    $description = htmlspecialchars($_POST['recipeDescription']);
    $cookTime = htmlspecialchars($_POST['cook_Time']);
