@@ -17,7 +17,7 @@ foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT
       SELECT '".$ingredient ."'
       WHERE NOT EXISTS (SELECT * FROM ingredients WHERE ingredient_name = '". $ingredient. "');");
 
-      foreach ($db->query("SELECT ingredient_id WHERE ingredient_name ='". $ingredient . "';")as $row) {
+      foreach ($db->query("SELECT ingredient_id FROM ingredients WHERE ingredient_name ='". $ingredient . "';")as $row) {
            $_SESSION['ingredientID'] = $row['ingredient_id'];
            echo $_SESSION['ingredientID'];
         }
