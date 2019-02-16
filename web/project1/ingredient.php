@@ -15,5 +15,5 @@ foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT
       SELECT '".$ingredient ."'
       WHERE NOT EXISTS (SELECT * FROM ingredients WHERE ingredient_name = '". $ingredient. "');");
    }
-  // echo $_SESSION['tempId'];
+  echo $_SESSION['tempId'];
 ?>
