@@ -4,12 +4,11 @@ include_once "header.php";
 require "config.php";
 $db=getDb();
 
-
-
+      
 ?>
   <div id="submitForm">
         <h1>Recipe Submission</h1>
-        <form action="" method="post" id="recipeForm" enctype="multipart/form-data">
+        <form action="submit.php" method="post" id="recipeForm" enctype="multipart/form-data">
             <label for="recipeName">Recipe Name: </label>
             <input type="text" id="recipeName" name="recipeName" required />
             <label for="recipeDescription">Description</label>
@@ -37,9 +36,8 @@ $db=getDb();
             <div id="image">
                 <label for="recipeImage">Image upload: </label>
                 <input type="file" name="recipeImage" id="recipeImage" accept="image/*" required />
-                
+                <input type="submit" />
             </div>
-            <button type="button" id="recipeFormSubmit"/>add recipe</button>
         </form>
         <form  method="post" id="ingredientForm">
            <h2> Ingredients: </h2>
@@ -51,7 +49,28 @@ $db=getDb();
          </ul>
         </div>
     </div>
-   
+    <?php 
+   $name = htmlspecialchars($_POST['recipeName']);
+   $description = htmlspecialchars($_POST['recipeDescription']);
+   $cookTime = htmlspecialchars($_POST['cook_Time']);
+   $prepTime = htmlspecialchars($_POST['prep_Time']);
+   $totalTime = htmlspecialchars($_POST['total_Time']);
+   $serving = htmlspecialchars($_POST['serving_size']);
+   $calories = htmlspecialchars($_POST['calories']);
+   $cuisine = htmlspecialchars($_POST['cuisine']);
+   $recipeImage_path = htmlspecialchars('images/'.$_FILES['recipeImage']['name']);
+  
+  if(preg_match("!image!", $_FILES['recipeImage']['type'])) {
+       
+    if (copy($_FILES['recipeImage']['tmp_name'], $recipeImage_path)) {
+        
+         $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."');");
+              
+       
+   }
+   }
+ 
+?>
     
 
 <?php

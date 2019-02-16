@@ -61,7 +61,7 @@ $(document).ready(function () {
 		var recipeIm = $('#recipeImage').val();
 
 		$.ajax({
-			url: "addRecipeInfo.php",
+			url: "submit.php",
 			data: { 'recipeName': name, 'recipeDescription': descript, 'cook_Time': cTime, 'prep_Time': pTime, 'total_time': tTime, 'serving_size': ss, 'calories': cal, 'cuisine': cuis, 'recipeImage': recipeIm },
 			type: "POST",
 			success: function (data) {
