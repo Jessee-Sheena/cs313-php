@@ -5,7 +5,7 @@ require "config.php";
 $db=getDb();
 foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT 1;") as $row)
 {
-               $tmp = $row['recipe_id'];        
+               $_SESSION['tempId'] = $row['recipe_id'];        
                 
  }	
 
