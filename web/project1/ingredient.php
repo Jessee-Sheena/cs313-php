@@ -8,7 +8,7 @@ $unit;
 $measurement;
 foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT 1;") as $row)
 {
-               $_SESSION['tempId'] = $row['recipe_id'];        
+              // $_SESSION['tempId'] = $row['recipe_id'];        
                 
  }	
 
@@ -24,5 +24,5 @@ foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT
       SELECT '".$unit ."'
       WHERE NOT EXISTS (SELECT * FROM measurement WHERE unit = '". $unit. "');");
    }
-  Echo $ingredient + " " + $unit;
+  echo $ingredient + " " + $unit;
 ?>
