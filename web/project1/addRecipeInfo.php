@@ -12,6 +12,8 @@ $db=getDb();
    $calories = htmlspecialchars($_POST['calories']);
    $cuisine = htmlspecialchars($_POST['cuisine']);
    $recipeImage_path = htmlspecialchars('images/'.$_FILES['recipeImage']['name']);
+   print_r($name);
+   Print_r($recipeImage_path);
   
  if(preg_match("!image!", $_FILES['recipeImage']['type'])) {
        
