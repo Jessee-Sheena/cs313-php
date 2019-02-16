@@ -33,7 +33,7 @@ $(document).ready(function () {
 }); 
 
 $(document).ready(function () {
-	$("#ingredientSubmit").click(function () {
+	$("#stepsSubmit").click(function () {
 		var step = $('#steps').val();	
 		
 		$.ajax({
@@ -50,7 +50,7 @@ $(document).ready(function () {
 	});
 });
 $(document).ready(function () {
-	$("#stepsSubmit").click(function () {
+	$("#ingredientSubmit").click(function () {
 		var ing = $('#ingredient').val();
 		var quantity = $('#amount').val();
 		var unit = $('#measurement').val();
