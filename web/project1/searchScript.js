@@ -39,7 +39,7 @@ $(document).ready(function () {
 		var unit= $('#measurement').val();
 		$.ajax({
 			url: "ingredient.php",
-			data: { 'ingredient': ing, 'amount': quantity, 'measurement': unit},
+			data: {'ingredient': ing, 'amount': quantity, 'measurement': unit},
 			type: "POST",
 			success: function (data) {
 				console.log(data);
