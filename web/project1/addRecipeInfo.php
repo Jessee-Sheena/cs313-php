@@ -3,7 +3,7 @@ session_start();
 
 require "config.php";
 $db=getDb();
-echo "hello";
+
  $name = htmlspecialchars($_POST['recipeName']);
    $description = htmlspecialchars($_POST['recipeDescription']);
    $cookTime = htmlspecialchars($_POST['cook_Time']);
