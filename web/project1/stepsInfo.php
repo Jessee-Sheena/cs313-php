@@ -4,11 +4,12 @@ require "config.php";
 $db=getDb();
 if(isset($_POST['steps'])) {
       $step = htmlspecialchars($_POST['steps']);  
-      $stepNum = htmlspecialchars($_POST['stepNum']);      
-      $db->query("INSERT INTO steps (recipe_id, step_number, step_instruction)
+      $stepNum = htmlspecialchars($_POST['stepNum']);   
+      echo $_SESSION['recipeId'];
+     /* $db->query("INSERT INTO steps (recipe_id, step_number, step_instruction)
       VALUES ( '". $_SESSION['recipeId'] ."', ' " . $stepNum ."', ' " . $step . "');");
       echo $stepNum . " " . $step;
-      }
+      }*/
       
 
       
