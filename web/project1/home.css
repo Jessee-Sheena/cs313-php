@@ -112,10 +112,10 @@ main {
     max-width: 60%;
     margin: auto;
 }
-#ingredientFormDiv {
+div#ingredientFormDiv {
     display: none;
     
 }
-#stepsFormDiv {
+div#stepsFormDiv {
     display: none;
 }
