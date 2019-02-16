@@ -19,7 +19,7 @@ foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT
 
       foreach ($db->query("SELECT ingredient_id FROM ingredients WHERE ingredient_name ='". $ingredient . "';")as $row) {
            $_SESSION['ingredientID'] = $row['ingredient_id'];
-           echo $_SESSION['ingredientID'];
+           
         }
    }
    if(isset($_POST['measurement'])) {
@@ -31,6 +31,7 @@ foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT
 
       foreach ($db->query("SELECT measurement_id FROM measurement WHERE unit ='". $unit . "';")as $row) {
            $_SESSION['measurementID'] = $row['measurement_id'];
+           echo $_SESSION['measurementID'];
         }
    }
   /* if(isset($_POST['amount'])) {
