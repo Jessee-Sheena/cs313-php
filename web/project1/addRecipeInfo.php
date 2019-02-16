@@ -3,7 +3,7 @@ session_start();
 
 require "config.php";
 $db=getDb();
-/* $name = htmlspecialchars($_POST['recipeName']);
+ $name = htmlspecialchars($_POST['recipeName']);
    $description = htmlspecialchars($_POST['recipeDescription']);
    $cookTime = htmlspecialchars($_POST['cook_Time']);
    $prepTime = htmlspecialchars($_POST['prep_Time']);
@@ -11,7 +11,7 @@ $db=getDb();
    $serving = htmlspecialchars($_POST['serving_size']);
    $calories = htmlspecialchars($_POST['calories']);
    $cuisine = htmlspecialchars($_POST['cuisine']);
-   $recipeImage_path = htmlspecialchars('images/'.$_FILES['recipeImage']['name']);*/
+   $recipeImage_path = htmlspecialchars('images/'.$_FILES['recipeImage']['name']);
   
  /* if(preg_match("!image!", $_FILES['recipeImage']['type'])) {
        
