@@ -41,7 +41,12 @@ $db=getDb();
         </form>
         <form  method="post" id="ingredientForm">
            <h2> Ingredients: </h2>
-           <input name="ingredient" id ="ingredient" type="text">
+           <label for="ingredient">Ingredient name: </label>
+           <input name="ingredient" id ="ingredient" type="text" required>
+           <label for ="amount"> Amount of ingredient: </label>
+           <input name="amount" id="amount" type="number" required>
+           <input for="measurement">Unit of Measurement: (ie cup, oz) </label>
+           <input name="measurement" id="measurement" type ="text" required>
            <button type="button" id="ingredientSubmit" >Add ingredient </button>
         </form>
         <div id="ingredientListDiv" >
