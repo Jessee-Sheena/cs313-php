@@ -24,7 +24,8 @@ foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT
    }
    if(isset($_POST['measurement'])) {
       $unit = htmlspecialchars($_POST['measurement']);
-      echo $unit . " ";
+      $quantity = htmlspecialchars($_POST['amount']);
+      echo $quantity . " " . $unit;
       $db->query("INSERT INTO measurement (unit)
       SELECT '".$unit ."'
       WHERE NOT EXISTS (SELECT * FROM measurement WHERE unit = '". $unit. "');");
@@ -36,7 +37,6 @@ foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT
    }
   if(isset($_POST['amount'])) {
       $quantity = htmlspecialchars($_POST['amount']);
-      echo $quantity;
       $db->query("INSERT INTO recipe_ingredients (ingredient_id, recipe_id, measurement_id, ingredient_amount )
       VALUES ('". $_SESSION['ingredientID'] . "', '" . $_SESSION['recipeId'] . "', '" . $_SESSION['measurementID'] . "', '" . $quantity."');");
        
