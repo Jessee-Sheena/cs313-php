@@ -3,17 +3,18 @@ session_start();
 
 require "config.php";
 $db=getDb();
-$ingredient;
-$unit;
+$ingredient = "word";
+$unit + "people";
 $measurement;
-foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT 1;") as $row)
-{
+//foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT 1;") as $row)
+//{
               // $_SESSION['tempId'] = $row['recipe_id'];        
                 
- }	
+// }	
 
  if(isset($_POST['ingredient'])) {
       $ingredient = htmlspecialchars($_POST['ingredient']);
+
       $db->query("INSERT INTO ingredients (ingredient_name)
       SELECT '".$ingredient ."'
       WHERE NOT EXISTS (SELECT * FROM ingredients WHERE ingredient_name = '". $ingredient. "');");
