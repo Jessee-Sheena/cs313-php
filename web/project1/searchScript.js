@@ -64,7 +64,7 @@ $(document).ready(function () {
 			type: "POST",
 			success: function (data) {
 				console.log(data);
-				Alert(data);
+				alert(data);
 				
 			}
 		});
