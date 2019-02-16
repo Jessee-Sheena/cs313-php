@@ -15,5 +15,11 @@ foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT
       SELECT '".$ingredient ."'
       WHERE NOT EXISTS (SELECT * FROM ingredients WHERE ingredient_name = '". $ingredient. "');");
    }
-  
+   if(isset($_POST['measurment'])) {
+      $unit = htmlspecialchars($_POST['measurement']);
+      $db->query("INSERT INTO measurement (unit)
+      SELECT '".$unit ."'
+      WHERE NOT EXISTS (SELECT * FROM measurement WHERE unit = '". $unit. "');");
+   }
+  Echo $ingredient + " " + $unit;
 ?>

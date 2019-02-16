@@ -34,7 +34,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 	$("#ingredientSubmit").click(function () {
-		var ing = $('#ingredient').val();	
+		var  = $('#ingredient').val();	
 		var quantity = $('#amount').val();
 		var unit= $('#measurement').val();
 		$.ajax({
