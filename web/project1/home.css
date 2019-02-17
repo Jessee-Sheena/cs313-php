@@ -113,7 +113,7 @@ main {
     margin: auto;
 }
 div#ingredientFormDiv {
-    display: none;
+    display: block;
     
 }
 div#stepsFormDiv {

@@ -31,11 +31,7 @@ $(document).ready(function () {
 		}
 	});
 }); 
-$(document).ready(function () {
-	$("#theRecipe").click(function () {
-		$("#ingredientFormDiv").css("display", "block");
-	});
-});
+
 
 $(document).ready(function () {
 	$("#stepsSubmit").click(function () {
