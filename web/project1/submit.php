@@ -33,6 +33,7 @@ $db=getDb();
                <option value="Italian">Italian</option> 
                <option value="Caribbean">Caribbean</option> 
            </select> 
+           <input>
             <div id="image">
                 <label for="recipeImage">Image upload: </label>
                 <input type="file" name="recipeImage" id="recipeImage" accept="image/*" required />
@@ -42,6 +43,9 @@ $db=getDb();
         <div id="ingredientFormDiv">
         <form  method="post" id="ingredientForm">
            <h2> Ingredients: </h2>
+           <p> Some recipes have ingredients for many parts. Please label each ingredient to conicide with the section it belongs to. If no other sections exist then label ingredients to section 1.
+           <label for="section">Recipe part: (ie main course, sauce)</label>
+           <input type="number" name="section" id="section" required>
            <label for="ingredient">Ingredient name: </label>
            <input name="ingredient" id ="ingredient" type="text" required>
            <label for ="amount"> Amount of ingredient: </label>
