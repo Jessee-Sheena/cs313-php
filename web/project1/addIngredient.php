@@ -1,4 +1,12 @@
-        <div id="ingredientFormDiv">
+<?php 
+session_start();
+include_once "header.php";
+require "config.php";
+$db=getDb();
+
+      
+?>
+    <div id="ingredientFormDiv">
         <form  method="post" id="ingredientForm">
            <h2> Ingredients: </h2>
            <p> Some recipes have ingredients for many parts. Please label each ingredient to conicide with the section it belongs to. If no other sections exist then label ingredients to section 1.
@@ -55,3 +63,7 @@
  
 ?>
     
+<?php
+ 
+   include_once "footer.php";
+ ?>
