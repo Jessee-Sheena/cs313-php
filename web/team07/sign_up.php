@@ -17,6 +17,8 @@ if(isset($_POST['username'])) {
 $hashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
 $query =$db->prepare("INSERT INTO \"userTeam\" (userName, user_password) VALUES ('".$_POST['username']."','".$hashedPassword."');");
 $query->execute();
+header('Location: sign_in.php ');
+die();
 
 }
  ?>
