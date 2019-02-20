@@ -1,9 +1,11 @@
-<?php
+<?php 
+session_start();
 require "config.php";
-$db = getDb();
+$db=getDb();
 
-
+      
 ?>
+
 
 <label for="username"> Enter username: </label>
 <input type="text" name="username" id="username" required>
