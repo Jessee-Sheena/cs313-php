@@ -33,7 +33,7 @@ $db=getDb();
                <option value="Italian">Italian</option> 
                <option value="Caribbean">Caribbean</option> 
            </select> 
-           <input>
+          
             <div id="image">
                 <label for="recipeImage">Image upload: </label>
                 <input type="file" name="recipeImage" id="recipeImage" accept="image/*" required />

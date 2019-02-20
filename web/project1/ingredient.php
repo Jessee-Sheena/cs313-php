@@ -41,6 +41,17 @@ foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT
       VALUES ('". $_SESSION['ingredientID'] . "', '" . $_SESSION['recipeId'] . "', '" . $_SESSION['measurementID'] . "', '" . $quantity."');");
        
    }
+   if(isset($_POST['sectionName'])) {
+      $name = htmlspecialchars($_POST['sectionName']);
+      $number = htmlspecialchars($_POST['sectionNum']);
+      $db->query("INSERT INTO section (section, section_name)
+      SELECT '".$name ."', 
+      WHERE NOT EXISTS (SELECT * FROM measurement WHERE unit = '". $unit. "');");
+
+      foreach ($db->query("SELECT measurement_id FROM measurement WHERE unit ='". $unit . "';")as $row) {
+           $_SESSION['measurementID'] = $row['measurement_id'];
+           
+        }
   
  
 ?>
