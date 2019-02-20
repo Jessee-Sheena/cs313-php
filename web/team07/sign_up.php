@@ -1,6 +1,7 @@
 <style>
 .asterisk {
    display: none;
+   color: red;
 }
 
 </style>
@@ -17,7 +18,7 @@ if(isset($_POST['password']) AND isset($_POST['password2']) AND isset($_POST['us
   die();
 } else{
   echo "<p style=\"color: red\"> Passwords do not match.</p>";
-  ?> <style> .asterisk {display: inline;} </style> <?php
+  ?> <style> .asterisk .password {display: inline;} </style> <?php
 }
 
 }
