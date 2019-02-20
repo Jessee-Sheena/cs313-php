@@ -19,7 +19,7 @@ if(isset($_POST['password']) AND isset($_POST['password2']) AND isset($_POST['us
        header('Location: sign_in.php ');
        die();
   }else {
-  echo "Password is not long enough or does not contain a number.";
+  echo "<p style=\"color: red\">Password is not long enough or does not contain a number.</p>";
 }
 } else{
   echo "<p style=\"color: red\"> Passwords do not match.</p>";
@@ -35,9 +35,9 @@ if(isset($_POST['password']) AND isset($_POST['password2']) AND isset($_POST['us
 <span class="asterisk user" > * </span><label for="username"> Create a username: </label>
 <input type="text" name="username" id="username" required>
 <span class="asterisk password" > * </span><label for="password"> Create a password: (at least 7 charachters)</label>
-<input type="password" name="password" id="password" required>
+<input type="password" name="password" id="password" pattern="(?=.*\d)[A-Za-z\d]{7,}" required>
 <span class="asterisk password" > * </span><label for="password2"> Verify Password </label>
 <input type="password" name="password2" id="password2" required>
 <input type="submit">
-</form>
+</form
 
