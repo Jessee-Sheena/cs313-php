@@ -14,7 +14,7 @@ $db=getDb();
 <a href="sign_up.php"> sign up </a>
 </form>
 <?php
-$query = $db->query("SELECT userName, user_password FROM \"userTeam\" WHERE userName = '". $_POST['username']."');" );
+$query = $db->query("SELECT userName, user_password FROM \"userTeam\" WHERE userName = '". $_POST['username']."';" );
 $query->execute(); 
 $user = $query->fetch();
 if (password_verify($_POST['password'],$user['user_password'])) {
