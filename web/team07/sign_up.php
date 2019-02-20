@@ -1,3 +1,9 @@
+<style>
+.asterisk {
+   display: none;
+}
+
+</style>
 <?php 
 session_start();
 require "config.php";
@@ -18,12 +24,7 @@ if(isset($_POST['password']) AND isset($_POST['password2']) AND isset($_POST['us
 
       
 ?>
-<style>
-.asterisk {
-   display: none;
-}
 
-</style>
 <form action="sign_up.php" method="post"> 
 <span class="asterisk user" > * </span><label for="username"> Create a username: </label>
 <input type="text" name="username" id="username" required>
