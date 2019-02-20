@@ -12,7 +12,7 @@ $db=getDb();
 if(isset($_POST['password']) AND isset($_POST['password2']) AND isset($_POST['username'])) {
   if($_POST['password']== $_POST['password2']) {
      $length = strlen($_POST['password']);
-     if($length > 7 AND 1 === preg_match('~[0-9]~', $_POST['password'])) {
+     if($length >= 7 AND 1 === preg_match('~[0-9]~', $_POST['password'])) {
        $hashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
        $query =$db->prepare("INSERT INTO \"userTeam\" (userName, user_password) VALUES ('".$_POST['username']."','".$hashedPassword."');");
        $query->execute();
