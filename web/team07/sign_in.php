@@ -18,7 +18,11 @@ $query = $db->query("SELECT userName, user_password FROM \"userTeam\" WHERE user
 $query->execute(); 
 $user = $query->fetch();
 if (password_verify($_POST['password'],$user['user_password'])) {
+    $_SESSION['user'] = $_POST['username'];
     header('Location: welcome.php');
+    die();
+   
+    
 }
 else {
 echo "Password Incorrect";
