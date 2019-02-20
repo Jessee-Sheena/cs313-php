@@ -14,8 +14,8 @@ $db=getDb();
 </form>
 <?php
 if(isset($_POST['username'])) {
-
-$query =$db->prepare("INSERT INTO \"userTeam\" (userName, user_password) VALUES ('".$_POST['username']."','".$_POST['password']."');");
+$hashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
+$query =$db->prepare("INSERT INTO \"userTeam\" (userName, user_password) VALUES ('".$_POST['username']."','".$hashedPassword."');");
 $query->execute();
 
 }
