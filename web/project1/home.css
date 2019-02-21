@@ -119,3 +119,7 @@ div#ingredientFormDiv {
 div#stepsFormDiv {
     display: none;
 }
+ .asterisk {
+    display: none;
+    color: red;
+}
