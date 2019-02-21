@@ -53,10 +53,11 @@ foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT
            $id = 1;
            break;
       }
-      echo $_POST['sectionName'];
-     /* $quantity = htmlspecialchars($_POST['amount']);
+     
+     
+ $quantity = htmlspecialchars($_POST['amount']);
       $db->query("INSERT INTO recipe_ingredients (ingredient_id, recipe_id, measurement_id, ingredient_amount, section_id )
-      VALUES ('". $_SESSION['ingredientID'] . "', '" . $_SESSION['recipeId'] . "', '" . $_SESSION['measurementID'] . "', '" . $quantity."'" . $id . "');");*/
+      VALUES ('". $_SESSION['ingredientID'] . "', '" . $_SESSION['recipeId'] . "', '" . $_SESSION['measurementID'] . "', '" . $quantity."'" . $id . "');");
        
    }
   
