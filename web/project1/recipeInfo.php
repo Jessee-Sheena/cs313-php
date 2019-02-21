@@ -7,7 +7,10 @@
    
  ?>
  <div id="infoDiv">
+  <a href="delete.php">Delete Recipe</a>
+  <a href="edit.php">Edit Recipe</a>
  <?php
+  
   foreach ($db->query("SELECT * FROM recipe WHERE recipe_id = " .$_SESSION['id'] ) as $row)
         {?>
         
