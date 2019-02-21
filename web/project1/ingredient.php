@@ -40,13 +40,13 @@ foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT
   if(isset($_POST['amount'])) {
       $id = 1;
       switch ($_POST['sectionName'])   {
-      case 'main':
+      case "main":
            $id = 1;
            break;
-      case 'sauce':
+      case "sauce":
            $id = 2;
            break;
-      case 'marinade':
+      case "marinade":
            $id = 4;
            break;
        default:
