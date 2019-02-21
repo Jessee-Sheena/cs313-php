@@ -5,6 +5,7 @@
 
 
    $db->query("DELETE FROM recipe_ingredients WHERE recipe_id = '". $_SESSION['id']. "';");
+   $db->query("DELETE FROM steps WHERE recipe_id = '". $_SESSION['id']. "';");
    $db->query("DELETE FROM recipe WHERE recipe_id = '". $_SESSION['id']. "';");
    header('Location: recipelist.php');
  ?>
