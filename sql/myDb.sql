@@ -119,3 +119,6 @@ INSERT INTO steps (recipe_id, step_number, step_instruction)
 	  INSERT INTO section (section_name)
       SELECT 'main'
       WHERE NOT EXISTS (SELECT * FROM section WHERE section_name = 'main');
+
+INSERT INTO recipe_ingredients (ingredient_id, recipe_id, measurement_id, ingredient_amount, section_id )
+      VALUES ('". $_SESSION['ingredientID'] . "', '" . $_SESSION['recipeId'] . "', '" . $_SESSION['measurementID'] . "', '" . $quantity."', '" . $id . "');
