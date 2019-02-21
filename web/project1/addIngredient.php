@@ -9,17 +9,20 @@ $db=getDb();
     <div id="ingredientFormDiv">
         <form  method="post" id="ingredientForm">
            <h2> Ingredients: </h2>
-           <p> Some recipes have ingredients for many parts. Please label each ingredient to conicide with the section it belongs to. If no other sections exist then label ingredients to section 1.
-           <label for="sectionName">Recipe part Name: (ie main course, sauce)</label>
-           <input type="text" name="sectionName" id="sectionName" required>
-           <label for="sectionNum">Recipe part Number: (ie 1 , 2)</label>
-           <input type="number" name="sectionNum" id="sectionNum" required>
+                    
            <label for="ingredient">Ingredient name: </label>
            <input name="ingredient" id ="ingredient" type="text" required>
            <label for ="amount"> Amount of ingredient: </label>
            <input name="amount" id="amount" type="number" required>
            <label for="measurement">Unit of Measurement: (ie cup, oz) </label>
            <input name="measurement" id="measurement" type ="text" required>
+           <p> This ingredient is part of the:</p>
+           <input type="radio" name="sectionName" id="no"  value="main" required>
+           <label for="no">Main Dish</label>
+           <input type="radio" name="sectionName" id="sauce" value="sauce" required>
+           <label for="sauce">Sauce</label>
+           <input type="radio" name="sectionName" id="marinade"  value="marinade" required>
+           <label for="marinade">Marinade</label>
            <button type="button" id="ingredientSubmit" >Add ingredient </button>
         </form>
         </div>

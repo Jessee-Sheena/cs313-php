@@ -116,3 +116,6 @@ INSERT INTO recipe_ingredients (ingredient_id, recipe_id, measurement_id, ingred
 VALUES ('1', '1', '1', '1');
 INSERT INTO steps (recipe_id, step_number, step_instruction)
       VALUES ( '1', ' 1', ' slkjdf');
+	  INSERT INTO section (section_name)
+      SELECT 'main'
+      WHERE NOT EXISTS (SELECT * FROM section WHERE section_name = 'main');
