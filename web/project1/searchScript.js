@@ -55,10 +55,11 @@ $(document).ready(function () {
 		var ing = $('#ingredient').val();
 		var quantity = $('#amount').val();
 		var unit = $('#measurement').val();
+		var section = $('input[name=sectionName]:checked').val();
 		$.ajax({
 			url: "ingredient.php",
 			data: {
-				'ingredient': ing, 'amount': quantity, 'measurement': unit
+				'ingredient': ing, 'amount': quantity, 'measurement': unit, 'sectionName': section
 			},
 			type: "POST",
 			success: function (data) {
