@@ -88,23 +88,23 @@ $(document).ready(function () {
 		var insert;
 		switch (word) {
 			case 'Recipe':
-				insert = '<label for="recipeName2">Recipe Name: </label>< input type = "text" id = "recipeName2" name = "recipeName2" required /><button type="submit" id="submitButton">Make Changes</button>'
+				insert = '<label for="recipeName2">Recipe Name: </label><input type = "text" id = "recipeName2" name = "recipeName2" required /><button type="submit" id="submitButton">Make Changes</button>'
 				$('#editInput').html(insert);
 				break;
 			case 'Description':
-				insert = '<label for="recipeDescription">Description</label>< textarea rows = "4" cols = "30" name = "recipeDescription2" id = "recipeDescription2" requied ></textarea ><button type="submit" id="submitButton">Make Changes</button>'
+				insert = '<label for="recipeDescription">Description</label><textarea rows = "4" cols = "30" name = "recipeDescription2" id = "recipeDescription2" requied></textarea ><button type="submit" id="submitButton">Make Changes</button>'
 				$('#editInput').html(insert);
 				break;
 			case 'cookTime':
-				insert = '<label for="cook_Time2">Cook Time: </label>< input type = "number" id = "cook_Time2" name = "cook_Time2" required /></select> <button type="submit" id="submitButton">Make Changes</button>';
+				insert = '<label for="cook_Time2">Cook Time: </label><input type = "number" id = "cook_Time2" name = "cook_Time2" required /></select> <button type="submit" id="submitButton">Make Changes</button>';
 				$('#editInput').html(insert);
 				break;
 			case 'prepTime':
-				insert = '<label for=" prep_Time2">Preperation Time: </label>< input type = "number" id = "prep_Time2" name = "prep_Time2" required /><button type="submit" id="submitButton">Make Changes</button>';
+				insert = '<label for=" prep_Time2">Preperation Time: </label><input type = "number" id = "prep_Time2" name = "prep_Time2" required /><button type="submit" id="submitButton">Make Changes</button>';
 				$('#editInput').html(insert);
 				break;
 			case 'time':
-				insert = '<label for="total_Time2">Total Time: </label>< input type = "number" name = "total_Time2" id = "total_time2" required /><button type="submit" id="submitButton">Make Changes</button>';
+				insert = '<label for="total_Time2">Total Time: </label><input type = "number" name = "total_Time2" id = "total_time2" required /><button type="submit" id="submitButton">Make Changes</button>';
 				$('#editInput').html(insert);
 				break;
 			case 'servSize':
@@ -112,15 +112,15 @@ $(document).ready(function () {
 				$('#editInput').html(insert);
 				break;
 			case 'calories':
-				insert = '<label for="calories2">Calories</label>< input type = "number" name = "calories2" id = "calories2" required /><button type="submit" id="submitButton">Make Changes</button>';
+				insert = '<label for="calories2">Calories</label><input type = "number" name = "calories2" id = "calories2" required /><button type="submit" id="submitButton">Make Changes</button>';
 				$('#editInput').html(insert);
 				break;
 			case 'cuisine':
-				insert = '<label for="cuisine2">Cuisine Type: </label>< select name = "cuisine2" id = "cuisine2" required ><option value=""> Select</option><option value="American">American</option><option value="Chinese">Asian</option><option value="Indian">Indian</option><option value="Mexican">Mexican</option><option value="Italian">Italian</option><option value="Caribbean">Caribbean</option></select > <button type="submit" id="submitButton">Get Recipes</button>';
+				insert = '<label for="cuisine2">Cuisine Type: </label><select name = "cuisine2" id = "cuisine2" required ><option value=""> Select</option><option value="American">American</option><option value="Chinese">Asian</option><option value="Indian">Indian</option><option value="Mexican">Mexican</option><option value="Italian">Italian</option><option value="Caribbean">Caribbean</option></select > <button type="submit" id="submitButton">Get Recipes</button>';
 				$('#editInput').html(insert);
 				break;
 			case 'image':
-				insert = '  <div id="image">< label for= "recipeImage2" > Image upload: </label ><input type="file" name="recipeImage2" id="recipeImage2" accept="image/*" required /><input type="submit" id="theRecipe" /></div ><button type="submit" id="submitButton">Get Recipes</button>';
+				insert = '<div id="image">< label for= "recipeImage2" > Image upload: </label ><input type="file" name="recipeImage2" id="recipeImage2" accept="image/*" required /><input type="submit" id="theRecipe" /></div ><button type="submit" id="submitButton">Get Recipes</button>';
 				$('#editInput').html(insert);
 				break;
 		}
