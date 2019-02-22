@@ -10,7 +10,7 @@ $db=getDb();
            <h2> Ingredient: </h2> 
            <h3> Do you want to: </h3>
            <input type="radio" name="updated" id="add"  value="add" required>
-           <label for="add">Add New Ingredient>
+           <label for="add">Add New Ingredient</label>
            <input type="radio" name="updated" id="exist" value="exist" required>
            <label for="exist">Edit Existing Ingredient</label>                       
            <label for="ingredient2">Ingredient name: </label>
@@ -42,7 +42,7 @@ $db=getDb();
            
          }
    }
-   /*if(isset($_POST['measurement2'])) {
+   if(isset($_POST['measurement2'])) {
       $unit = htmlspecialchars($_POST['measurement2']);
       $quantity = htmlspecialchars($_POST['amount2']);
       $db->query("INSERT INTO measurement (unit)
@@ -55,7 +55,7 @@ $db=getDb();
         }
    }   
      
-  if(isset($_POST['amount2'])) {
+  /*if(isset($_POST['amount2'])) {
       $id = 1;
       switch ($_POST['sectionName2'])   {
       case "main":
