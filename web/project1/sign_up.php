@@ -37,5 +37,5 @@ if(isset($_POST['password']) AND isset($_POST['password2']) AND isset($_POST['us
 </form
 
 <?php
-  } include_once "footer.php";
+   include_once "footer.php";
  ?>
