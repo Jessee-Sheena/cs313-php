@@ -15,13 +15,22 @@ $db=getDb();
     </form
 </div>
 <?php
-if(isset($_POST['password']) AND isset($_POST['password2']) AND isset($_POST['username'])) {
+ if(isset($_POST['password']) AND isset($_POST['password2']) AND isset($_POST['username'])) {
   if($_POST['password']== $_POST['password2']) {
      $length = strlen($_POST['password']);
      if($length >= 7 AND 1 === preg_match('~[0-9]~', $_POST['password'])) {
-        $db-query("UPDATE \"user\" SET user_name = '". $_POST['editUsername']. "' WHERE user_id = '" . $_SESSION['user_id']. "';");
-        $db-query("UPDATE \"user\" SET user_name = '" . $_POST['editPassword'] . "' WHERE user_id = '" . $_SESSION['user_id']. "';");
-        }
-     }
- }
+       $hashedPassword = password_hash($_POST['editPassword'], PASSWORD_DEFAULT);
+       $db-query("UPDATE \"user\" SET user_name = '". $_POST['editUsername']. "' WHERE user_id = '" . $_SESSION['user_id']. "';");
+        $db-query("UPDATE \"user\" SET password = '" . $_POST['editPassword'] . "' WHERE user_id = '" . $_SESSION['user_id']. "';");
+       header('Location: sign_in.php ');
+       die();
+  }else {
+  echo "<p style=\"color: red\">Password is not long enough or does not contain a number.</p>";
+}
+} else{
+  echo "<p style=\"color: red\"> Passwords do not match.</p>";
+  ?> <style>  .password {display: inline;} </style> <?php
+}
+
+}
 ?>
