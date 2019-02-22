@@ -5,19 +5,14 @@ require "config.php";
 $db=getDb();
 
 ?>
-  <div id="addNew">
-  <h2>Do you want to add new ingredient or update a current Ingredient? </h2>
-  <form action="editIngredients.php">
-  <input type="radio" name="updated" value="add" id="add">
-  <label for="add"> Add New Ingredient </label>
-  <input type="radio" name="updated" value="exist" id="exist">
-  <label for="exist"> Change Existing Ingredient </label>
-  <input type=submit>
-  </div>
- <?php if($_POST['updated'] == 'add') { ?>
- <div id="editIngredient">
+  <div id="editIngredient">
         <form action="editIngredients.php" method="post" id="editingredientform">
-           <h2> Edit the Ingredient: </h2>                    
+           <h2> Ingredient: </h2> 
+            <h3> Do you want to: </h3>
+           <input type="radio" name="updated" id="add"  value="add" required>
+           <label for="add">Add New Ingredient>
+           <input type="radio" name="updated" id="exist" value="exist" required>
+           <label for="exist">Edit Existing Ingredient</label>                       
            <label for="ingredient2">Ingredient name: </label>
            <input name="ingredient2" id ="ingredient2" type="text" required>
            <label for ="amount2"> Amount of ingredient: </label>
@@ -76,11 +71,18 @@ $db=getDb();
            $id = 1;
            break;
       }
+      if($_POST['updated'] == 'add') {
     
       $quantity = htmlspecialchars($_POST['amount']);
       $db->query("INSERT INTO recipe_ingredients (ingredient_id, recipe_id, measurement_id, ingredient_amount, section_id )
       VALUES ('". $_SESSION['ingredientID'] . "', '" . $_SESSION['Id'] . "', '" . $_SESSION['measurementID'] . "', '" . $quantity."', '" . $id . "');");
-       
+       }
+       if($_POST['updated'] == 'exist') {
+       $quantity = htmlspecialchars($_POST['amount']);
+       $db->query("UPDATE recipe_ingredients SET ingredient_id ='" . $_SESSION['ingredientID'] . "', measurement_id ='" . $_SESSION['measurementID'] . "', ingredient_amount = '" . $quantity . "', section_id = '" . $id . "' WHERE recipe_id = '" . $_SESSION['Id'] . "';" )
+      
+       }
+    
    }
    include_once "footer.php";
    ?>
