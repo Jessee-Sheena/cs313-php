@@ -9,7 +9,7 @@ $db=getDb();
   <div id="editForm">
         <h1>Update Recipe</h1>
         <label for="update" >What do you want to Update? </label>
-        <select id=update>
+        <select name="update" id=update>
           <option value=""> Select</option> 
                <option value="Recipe">Recipe Name</option> 
                <option value="Description">Description</option> 
@@ -23,7 +23,7 @@ $db=getDb();
                
         </select>
         <div id="">
-             <form action="edit.php" method="post" id="searchInput" enctype="multipart/form-data">
+             <form action="edit.php" method="post" id="editInput" enctype="multipart/form-data">
              </form>
         </div>
         
