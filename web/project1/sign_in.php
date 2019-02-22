@@ -12,11 +12,13 @@
 <label for="password"> Enter password: </label>
 <input type="password" name="password" id="password" required>
 <input type="submit">
-<a href="sign_up.php" class="createButton"> sign up </a>
-<a href="deleteUser.php" class="createButton"> Delete User </a>
-<a href="editUser.php" class="createButton"> Edit User </a>
-<a href="sign_out.php" class="createButton"> Sign Out </a>
-
+<?php
+if(!empty($_SESSION['user_id'])){ ?>
+   <a href="sign_up.php" class="createButton"> sign up </a>
+   <a href="deleteUser.php" class="createButton"> Delete User </a>
+   <a href="editUser.php" class="createButton"> Edit User </a>
+   <a href="sign_out.php" class="createButton"> Sign Out </a>
+<?php } ?>
 </form>
 </div>
 <?php
