@@ -8,40 +8,25 @@ $db=getDb();
 ?>
   <div id="editForm">
         <h1>Update Recipe</h1>
-        <form action="edit.php" method="post" id="editForm2" enctype="multipart/form-data">
-            <label for="recipeName2">Recipe Name: </label>
-            <input type="text" id="recipeName2" name="recipeName2" required />
-            <label for="recipeDescription">Description</label>
-            <textarea rows="4" cols="30" name="recipeDescription2" id="recipeDescription2" requied></textarea>
-            <label for="cook_Time2">Cook Time: </label>
-            <input type="number" id="cook_Time2" name="cook_Time2" required />
-            <label for=" prep_Time2">Preperation Time: </label>
-            <input type="number" id="prep_Time2" name="prep_Time2" required />
-            <label for="total_Time2">Total Time: </label>
-            <input type="number" name="total_Time2" id="total_time2" required/>
-            <label for="serving_size2">Serving Size: </label>
-            <input type="number" name="serving_size2" id="serving_size2" required/>
-            <label for="calories2">Calories</label>
-            <input type="number" name="calories2" id="calories2" required/>
-            <label for="cuisine2">Cuisine Type: </label>
-            <select name="cuisine2" id="cuisine2" required> 
-               <option value=""> Select</option> 
-               <option value="American">American</option> 
-               <option value="Chinese">Asian</option> 
-               <option value="Indian">Indian</option> 
-               <option value="Mexican">Mexican</option> 
-               <option value="Italian">Italian</option> 
-               <option value="Caribbean">Caribbean</option> 
-           </select> 
-          
-            <div id="image">
-                <label for="recipeImage2">Image upload: </label>
-                <input type="file" name="recipeImage2" id="recipeImage2" accept="image/*" required />
-                <input type="submit" id="theRecipe"/>
-            </div>
-        </form>
-
-
+        <label for="update" >What do you want to Update? </label>
+        <select id=update>
+          <option value=""> Select</option> 
+               <option value="Recipe">Recipe Name</option> 
+               <option value="Description">Description</option> 
+               <option value="cookTime">Cook Time</option> 
+               <option value="prepTime">Preperation Time</option> 
+               <option value="time">Total Time</option> 
+               <option value="servSize">Serving Size</option> 
+               <option value="calories">Calories</option> 
+               <option value="cuisine">Cuisine Type</option> 
+               <option value="image">Image</option>      
+               
+        </select>
+        <div id="">
+             <form action="edit.php" method="post" id="searchInput" enctype="multipart/form-data">
+             </form>
+        </div>
+        
 <?php
  
 $name = htmlspecialchars($_POST['recipeName']);
@@ -59,7 +44,7 @@ $name = htmlspecialchars($_POST['recipeName']);
     if (copy($_FILES['recipeImage']['tmp_name'], $recipeImage_path)) {
       
       
-        $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image, user_id) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."', '" . $_SESSION['user_id'] . "') WHERE recipe_id ='".$_SESSION['id']."';");
+        $db->query("UPDATE recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image, user_id) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."', '" . $_SESSION['user_id'] . "') WHERE recipe_id ='".$_SESSION['id']."';");
               
        
    }
