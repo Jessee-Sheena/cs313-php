@@ -19,9 +19,9 @@ $db=getDb();
        
     if (copy($_FILES['recipeImage']['tmp_name'], $recipeImage_path)) {
          echo "this is it";
-        $query = $db->query("SELECT user_id, password FROM \"user\" WHERE user_name = '". $_SESSION['user']."';" );
-        $query->execute(); 
-        $userID = $query->fetch();
+       foreach($db->query("SELECT user_id, password FROM \"user\" WHERE user_name = '". $_SESSION['user']."';" ) as $row); {
+               $userID = $row['user_id'];
+               }
         echo "made it through";
         echo $userID;
         $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image, user_id) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."', '" . $userID . "');");
