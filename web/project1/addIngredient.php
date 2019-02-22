@@ -18,13 +18,9 @@ $db=getDb();
   if(preg_match("!image!", $_FILES['recipeImage']['type'])) {
        
     if (copy($_FILES['recipeImage']['tmp_name'], $recipeImage_path)) {
-       
-       foreach($db->query("SELECT user_id, password FROM \"user\" WHERE user_name = '". $_SESSION['user']."';" ) as $row); {
-               $userID = $row['user_id'];
-               $_SESSION['user_id'] = $userID;
-               }
       
-        $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image, user_id) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."', '" . $userID . "');");
+      
+        $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image, user_id) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."', '" . $_SESSION['user_id'] . "');");
               echo"should have inserted";
        
    }

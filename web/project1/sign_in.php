@@ -26,6 +26,11 @@ $query->execute();
 $user = $query->fetch();
 if (password_verify($_POST['password'],$user['password'])) {
     $_SESSION['user'] = $_POST['username'];
+     
+       foreach($db->query("SELECT user_id, password FROM \"user\" WHERE user_name = '". $_SESSION['user']."';" ) as $row); {
+               $userID = $row['user_id'];
+               $_SESSION['user_id'] = $userID;
+               }
     header('Location: home.php');
     die();
    
