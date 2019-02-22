@@ -3,7 +3,7 @@ session_start();
 include_once "header.php";
 require "config.php";
 $db=getDb();
-   echo $_SESSION['user'];
+   
 
    $name = htmlspecialchars($_POST['recipeName']);
    $description = htmlspecialchars($_POST['recipeDescription']);
@@ -18,7 +18,7 @@ $db=getDb();
   if(preg_match("!image!", $_FILES['recipeImage']['type'])) {
        
     if (copy($_FILES['recipeImage']['tmp_name'], $recipeImage_path)) {
-        
+         echo "this is it";
          $query = $db->query("SELECT user_id FROM \"user\" WHERE user_name ='" . $_SESSION['user'] . "';" );
          $userID = $query->fetch();
          $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image, user_id) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."', '" . $userID . "');");
