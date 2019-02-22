@@ -16,6 +16,7 @@
 </form>
 </div>
 <?php
+if(isset($_POST['username']) AND isset($_POST['password'])) {
 $query = $db->query("SELECT user_name, password FROM \"user\" WHERE user_name = '". $_POST['username']."';" );
 $query->execute(); 
 $user = $query->fetch();
@@ -29,7 +30,7 @@ if (password_verify($_POST['password'],$user['password'])) {
 else {
 echo "Password Incorrect";
 }
-
+}
 
  ?>
  <?php
