@@ -22,7 +22,7 @@
      if($length >= 7 AND 1 === preg_match('~[0-9]~', $_POST['password'])) {
        $hashedPassword = password_hash($_POST['editPassword'], PASSWORD_DEFAULT);
        $db-query("UPDATE \"user\" SET user_name = '". $_POST['editUsername']. "', password = '". $hashedPassword ."' WHERE user_id = '" . $_SESSION['user_id']. "';");
-       header('Location: sign_in.php ');
+       header('Location: home.php ');
        die();
   }else {
   echo "<p style=\"color: red\">Password is not long enough or does not contain a number.</p>";
