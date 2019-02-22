@@ -120,7 +120,7 @@ $(document).ready(function () {
 				$('#editInput').html(insert);
 				break;
 			case 'image':
-				insert = '<div id="image">< label for= "recipeImage2" > Image upload: </label ><input type="file" name="recipeImage2" id="recipeImage2" accept="image/*" required /><input type="submit" id="theRecipe" /></div ><button type="submit" id="submitButton">Get Recipes</button>';
+				insert = '<div id="image"><label for= "recipeImage2" > Image upload: </label ><input type="file" name="recipeImage2" id="recipeImage2" accept="image/*" required /><input type="submit" id="theRecipe" /></div ><button type="submit" id="submitButton">Get Recipes</button>';
 				$('#editInput').html(insert);
 				break;
 		}

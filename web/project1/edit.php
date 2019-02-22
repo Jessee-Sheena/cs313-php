@@ -28,27 +28,56 @@ $db=getDb();
         </div>
         
 <?php
+     
  
-$name = htmlspecialchars($_POST['recipeName']);
-   $description = htmlspecialchars($_POST['recipeDescription']);
-   $cookTime = htmlspecialchars($_POST['cook_Time']);
-   $prepTime = htmlspecialchars($_POST['prep_Time']);
-   $totalTime = htmlspecialchars($_POST['total_Time']);
-   $serving = htmlspecialchars($_POST['serving_size']);
-   $calories = htmlspecialchars($_POST['calories']);
-   $cuisine = htmlspecialchars($_POST['cuisine']);
-   $recipeImage_path = htmlspecialchars('images/'.$_FILES['recipeImage']['name']);
-  
-  if(preg_match("!image!", $_FILES['recipeImage']['type'])) {
+        if(isset($_POST['recipeName'])) {
+           $name = htmlspecialchars($_POST['recipeName']);
+           $db->query("UPDATE recipe SET recipe_name ='". $name . "' WHERE recipe_id = '". $_SESSION['id']."';");
+         }
+        else if(isset($_POST['recipeDescription'])) {
+           $description = htmlspecialchars($_POST['recipeDescription']);
+           $db->query("UPDATE recipe SET recipe_description ='". $description . "' WHERE recipe_id = '". $_SESSION['id']."';");
+         }
+        else if(isset($_POST['cook_Time'])) {
+           $cookTime = htmlspecialchars($_POST['cook_Time']);
+           $db->query("UPDATE recipe SET cook_time ='". $cookTime . "' WHERE recipe_id = '". $_SESSION['id']."';");
+         }
+        else if(isset($_POST['prep_Time'])) {
+           $prepTime = htmlspecialchars($_POST['prep_Time']);
+           $db->query("UPDATE recipe SET prep_time ='". $prepTime . "' WHERE recipe_id = '". $_SESSION['id']."';");
+         }
+        else if(isset($_POST['serving_size'])) {
+            $serving = htmlspecialchars($_POST['serving_size']);
+            $db->query("UPDATE recipe SET serving_size ='". $serving . "' WHERE recipe_id = '". $_SESSION['id']."';");
+         } 
+        else if(isset($_POST['total_Time'])) {
+           $totalTime = htmlspecialchars($_POST['total_Time']);
+           $db->query("UPDATE recipe SET total_time ='". $totalTime . "' WHERE recipe_id = '". $_SESSION['id']."';");
+         }
+        else if(isset($_POST['calories'])) {
+           $calories = htmlspecialchars($_POST['calories']);
+           $db->query("UPDATE recipe SET calories ='". $calories . "' WHERE recipe_id = '". $_SESSION['id']."';");
+         }
+        else if(isset($_POST['cuisine'])) {
+           $cuisine = htmlspecialchars($_POST['cuisine']);
+           $db->query("UPDATE recipe SET cuisine ='". $cuisine . "' WHERE recipe_id = '". $_SESSION['id']."';");
+         }
+        else {
+           if(preg_match("!image!", $_FILES['recipeImage']['type'])) {
        
-    if (copy($_FILES['recipeImage']['tmp_name'], $recipeImage_path)) {
+              if (copy($_FILES['recipeImage']['tmp_name'], $recipeImage_path)) {
       
-      
-        $db->query("UPDATE recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image, user_id) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."', '" . $_SESSION['user_id'] . "') WHERE recipe_id ='".$_SESSION['id']."';");
+                  $recipeImage_path = htmlspecialchars('images/'.$_FILES['recipeImage']['name']);
+                  $db->query("UPDATE recipe SET image ='". $recipeImage_path . "' WHERE recipe_id = '". $_SESSION['id']."';");
+              }
+           } else {
+                echo "Please Upload a valid Image";
+             }
+        
               
-       
-   }
-   }
+       }    
+  
+   
  
    include_once "footer.php";
  ?>
