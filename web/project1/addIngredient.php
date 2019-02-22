@@ -23,6 +23,7 @@ $db=getDb();
         $query->execute(); 
         $userID = $query->fetch();
         echo "made it through";
+        echo userID;
         $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image, user_id) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."', '" . $userID . "');");
               echo"should have inserted";
        
