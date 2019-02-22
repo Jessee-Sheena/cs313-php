@@ -55,7 +55,7 @@ $db=getDb();
         }
    }   
      
-  /*if(isset($_POST['amount2'])) {
+  if(isset($_POST['amount2'])) {
       $id = 1;
       switch ($_POST['sectionName2'])   {
       case "main":
@@ -79,10 +79,10 @@ $db=getDb();
        }
        if($_POST['updated'] == 'exist') {
        $quantity = htmlspecialchars($_POST['amount']);
-       $db->query("UPDATE recipe_ingredients SET ingredient_id ='" . $_SESSION['ingredientID'] . "', measurement_id ='" . $_SESSION['measurementID'] . "', ingredient_amount = '" . $quantity . "', section_id = '" . $id . "' WHERE recipe_id = '" . $_SESSION['Id'] . "';" )
+       $db->query("UPDATE recipe_ingredients SET ingredient_id ='" . $_SESSION['ingredientID'] . "', measurement_id ='" . $_SESSION['measurementID'] . "', ingredient_amount = '" . $quantity . "', section_id = '" . $id . "' WHERE recipe_id = '" . $_SESSION['Id'] . "';" );
       
        }
     
    }
-   include_once "footer.php";*/
+   include_once "footer.php";
    ?>
