@@ -3,22 +3,15 @@
    include_once "header.php";   
    require "config.php";
    $db=getDb();
-   echo "what is happening";
-       echo $hashedPassword;
-       echo $_POST['editUsername'];
-       echo $_SESSION['user_id'];
+        
    if(isset($_POST['password']) AND isset($_POST['password2']) AND isset($_POST['username'])) {
   if($_POST['password']== $_POST['password2']) {
      $length = strlen($_POST['password']);
      if($length >= 7 AND 1 === preg_match('~[0-9]~', $_POST['password'])) {
-       //$hashedPassword = password_hash($_POST['editPassword'], PASSWORD_DEFAULT);
-       echo "what is happening";
-       echo $hashedPassword;
-       echo $_POST['editUsername'];
-       echo $_SESSION['user_id'];
-      // $db->query("UPDATE \"user\" SET user_name = '". $_POST['editUsername']. "', password = '". $hashedPassword ."' WHERE user_id = '" . $_SESSION['user_id']. "';");
-      // header('Location: home.php ');
-      // die();
+       $hashedPassword = password_hash($_POST['editPassword'], PASSWORD_DEFAULT);
+       $db->query("UPDATE \"user\" SET user_name = '". $_POST['editUsername']. "', password = '". $hashedPassword ."' WHERE user_id = '" . $_SESSION['user_id']. "';");
+       header('Location: home.php ');
+       die();
   }else {
   echo "<p style=\"color: red\">Password is not long enough or does not contain a number.</p>";
 }
