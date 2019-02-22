@@ -16,7 +16,7 @@
 </form>
 </div>
 <?php
-$query = $db->query("SELECT user_name, user_password FROM \"user\" WHERE user_name = '". $_POST['username']."';" );
+$query = $db->query("SELECT user_name, password FROM \"user\" WHERE user_name = '". $_POST['username']."';" );
 $query->execute(); 
 $user = $query->fetch();
 if (password_verify($_POST['password'],$user['password'])) {
