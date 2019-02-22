@@ -7,8 +7,10 @@
    
  ?>
  <div id="infoDiv">
-  <a href="delete.php">Delete Recipe</a>
-  <a href="edit.php">Edit Recipe</a>
+  <a href="delete.php" class="createButton">Delete Recipe</a>
+  <a href="edit.php" class="createButton">Edit Recipe Info</a>
+  <a href="editIngredients.php" class="createButton">Edit ingredients</a>
+  <a href="editSteps.php" class="createButton">Edit Steps</a>
  <?php
   
   foreach ($db->query("SELECT * FROM recipe WHERE recipe_id = " .$_SESSION['id'] ) as $row)
