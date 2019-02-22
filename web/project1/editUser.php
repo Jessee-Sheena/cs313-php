@@ -3,7 +3,9 @@
    include_once "header.php";   
    require "config.php";
    $db=getDb();
-        
+        echo $_POST['editPassword'];
+        echo $_SESSION['user_id'];
+        echo $hashedPassword;
    if(isset($_POST['password']) AND isset($_POST['password2']) AND isset($_POST['username'])) {
   if($_POST['password']== $_POST['password2']) {
      $length = strlen($_POST['password']);
