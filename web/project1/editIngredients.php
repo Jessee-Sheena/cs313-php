@@ -8,7 +8,7 @@ $db=getDb();
   <div id="editIngredient">
         <form action="editIngredients.php" method="post" id="editingredientform">
            <h2> Ingredient: </h2> 
-            <h3> Do you want to: </h3>
+           <h3> Do you want to: </h3>
            <input type="radio" name="updated" id="add"  value="add" required>
            <label for="add">Add New Ingredient>
            <input type="radio" name="updated" id="exist" value="exist" required>
@@ -28,10 +28,10 @@ $db=getDb();
            <label for="marinade">Marinade</label>
            <button type="submit" id="ingredientSubmit2" >Edit ingredient </button>
         </form>
-       
+    </div>
 <?php
 
-      if(isset($_POST['ingredient2'])) {
+   if(isset($_POST['ingredient2'])) {
          $ingredient = htmlspecialchars($_POST['ingredient2']);      
          $db->query("INSERT INTO ingredients (ingredient_name)
                    SELECT '".$ingredient ."'
@@ -40,9 +40,9 @@ $db=getDb();
          foreach ($db->query("SELECT ingredient_id FROM ingredients WHERE ingredient_name ='". $ingredient . "';")as $row) {
            $_SESSION['ingredientID2'] = $row['ingredient_id'];
            
-          }
+         }
    }
-   if(isset($_POST['measurement2'])) {
+   /*if(isset($_POST['measurement2'])) {
       $unit = htmlspecialchars($_POST['measurement2']);
       $quantity = htmlspecialchars($_POST['amount2']);
       $db->query("INSERT INTO measurement (unit)
@@ -84,5 +84,5 @@ $db=getDb();
        }
     
    }
-   include_once "footer.php";
+   include_once "footer.php";*/
    ?>
