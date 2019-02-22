@@ -3,34 +3,8 @@ session_start();
 include_once "header.php";
 require "config.php";
 $db=getDb();
-
-      
-?>
-  <div id="editForm">
-        <h1>Update Recipe</h1>
-        <label for="update" >What do you want to Update? </label>
-        <select name="update" id=update>
-          <option value=""> Select</option> 
-               <option value="Recipe">Recipe Name</option> 
-               <option value="Description">Description</option> 
-               <option value="cookTime">Cook Time</option> 
-               <option value="prepTime">Preperation Time</option> 
-               <option value="time">Total Time</option> 
-               <option value="servSize">Serving Size</option> 
-               <option value="calories">Calories</option> 
-               <option value="cuisine">Cuisine Type</option> 
-               <option value="image">Image</option>      
-               
-        </select>
-        <div id="">
-             <form action="edit.php" method="post" id="editInput" enctype="multipart/form-data">
-             </form>
-        </div>
-        
-<?php
-     
- 
-        if(isset($_POST['recipeName'])) {
+echo $_POST['recipeName'];
+  if(isset($_POST['recipeName'])) {
            $name = htmlspecialchars($_POST['recipeName']);
            $db->query("UPDATE recipe SET recipe_name ='". $name . "' WHERE recipe_id = '". $_SESSION['id']."';");
          }
@@ -77,6 +51,33 @@ $db=getDb();
               
        }    
   
+      
+?>
+  <div id="editForm">
+        <h1>Update Recipe</h1>
+        <label for="update" >What do you want to Update? </label>
+        <select name="update" id=update>
+          <option value=""> Select</option> 
+               <option value="Recipe">Recipe Name</option> 
+               <option value="Description">Description</option> 
+               <option value="cookTime">Cook Time</option> 
+               <option value="prepTime">Preperation Time</option> 
+               <option value="time">Total Time</option> 
+               <option value="servSize">Serving Size</option> 
+               <option value="calories">Calories</option> 
+               <option value="cuisine">Cuisine Type</option> 
+               <option value="image">Image</option>      
+               
+        </select>
+        <div id="">
+             <form action="edit.php" method="post" id="editInput" enctype="multipart/form-data">
+             </form>
+        </div>
+        
+<?php
+     
+ 
+      
    
  
    include_once "footer.php";
