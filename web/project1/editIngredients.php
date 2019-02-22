@@ -30,7 +30,7 @@ $db=getDb();
         </form>
        
 <?php
-}
+
       if(isset($_POST['ingredient2'])) {
          $ingredient = htmlspecialchars($_POST['ingredient2']);      
          $db->query("INSERT INTO ingredients (ingredient_name)
