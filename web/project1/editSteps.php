@@ -3,6 +3,8 @@ session_start();
 include_once "header.php";
 require "config.php";
 $db=getDb();
+
+echo $_POST['steps2'];
 if(isset($_POST['steps2'])) {
     $step = htmlspecialchars($_POST['steps2']);  
     $stepNum = htmlspecialchars($_POST['stepNum2']);   
