@@ -3,12 +3,14 @@
    require "config.php";
    $db=getDb();
    $item = htmlspecialchars($_POST['addto']);
-   if(empty($_SESSION['shoppingList'])) {
-      $_SESSION['shoppingList']= array();
-   }else {  
-     
+   echo $item;
+   if(isset($_SESSION['shoppingList'])) {
       array_push($_SESSION['shoppingList'], $item);
       print_r($_SESSION['shoppingList']);
+
+   }else {  
+     $_SESSION['shoppingList']= array();
+     
    }
   
    //header('Location: shoppingList.php');
