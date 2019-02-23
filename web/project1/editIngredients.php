@@ -84,7 +84,7 @@ echo $_POST['sectionName2']. "<br>";
         
        }
        if($_POST['updated'] == "exist") {
-              $db->query("UPDATE recipe_ingredients SET ingredient_id ='" . $_SESSION['ingredientID2'] . "', measurement_id ='" . $_SESSION['measurementID2'] . "', ingredient_amount = '" . $quantity . "', section_id = '" . $id . "' WHERE recipe_id = '" . $_SESSION['id'] . "';" );
+              $db->query("UPDATE recipe_ingredients SET recipe_id ='" . $_SESSION['id'] . "', measurement_id ='" . $_SESSION['measurementID2'] . "', ingredient_amount = '" . $quantity . "', section_id = '" . $id . "' WHERE ingredient_id = '" . $_SESSION['ingredientID2'] . "';" );
       
        }
     
