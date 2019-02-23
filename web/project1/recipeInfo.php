@@ -60,7 +60,7 @@
                  WHERE r.recipe_id =". $_SESSION['id'] ."AND s.section_id = 1
                  ORDER BY q.ingredient_id ASC;");
           $array->execute();      
-          $mainIngredients = $array->fetch_all();
+          $mainIngredients = $array->fetchAll();
           print_r($mainIngredients);
          ?>
         
