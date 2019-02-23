@@ -79,14 +79,9 @@ echo $_POST['sectionName2']. "<br>";
       }
       $quantity = htmlspecialchars($_POST['amount2']);
       if($_POST['updated'] == "add") {  
-      $test1 = 58;
-      $test2 = 58;
-      $test3 = 58;
-      $test4 = 58;
-      $test5 = 58;
          $db->query("INSERT INTO recipe_ingredients (ingredient_id, recipe_id, measurement_id, ingredient_amount, section_id )
-         VALUES ('". $test1 . "', '" . $test2 . "', '" . $test3 . "', '" . $test4."', '" . $test5 . "');");
-        // '". $_SESSION['ingredientID2'] . "', '" . $_SESSION['Id'] . "', '" . $_SESSION['measurementID2'] . "', '" . $quantity."', '" . $id . "');
+         VALUES ('". $_SESSION['ingredientID2'] . "', '" . $_SESSION['id'] . "', '" . $_SESSION['measurementID2'] . "', '" . $quantity."', '" . $id . "');");
+        
        }
        if($_POST['updated'] == "exist") {
               $db->query("UPDATE recipe_ingredients SET ingredient_id ='" . $_SESSION['ingredientID2'] . "', measurement_id ='" . $_SESSION['measurementID2'] . "', ingredient_amount = '" . $quantity . "', section_id = '" . $id . "' WHERE recipe_id = '" . $_SESSION['id'] . "';" );
