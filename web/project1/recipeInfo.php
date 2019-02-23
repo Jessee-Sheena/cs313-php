@@ -65,11 +65,13 @@
 
          $size = sizeof($mainIngredients);
          echo $size;
-         /* for ($i = 0; i < $size; $i++ ) {
-               foreach($mainIngredients[$i] as $key => $value) {
-                       echo $value;
-               }
-          }*/
+          for ($i = 0; i < $size; $i++ ) {
+             $size2 = sizeof($mainIngredients[$i]);
+             echo $size2;
+               //for($n = 0; n < ) {
+                       //echo $value;
+               //}
+          }
            
 
 
