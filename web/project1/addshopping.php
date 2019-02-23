@@ -4,7 +4,7 @@
    require "config.php";
    $db=getDb();
    $_SESSION['shoppingList']= array();
-   $item = htmlspeccialchars($_POST['addto']);
+   $item = htmlspeccialchars($_GET['addto']);
    echo $item;
    array_push($_SESSION['shoppingList'], $item);
    print_r($_SESSION['shoppingList']);

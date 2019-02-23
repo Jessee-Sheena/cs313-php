@@ -11,7 +11,7 @@
      <a href="edit.php" class="createButton">Edit Recipe Info</a>
      <a href="editIngredients.php" class="createButton">Edit ingredients</a>
      <a href="editSteps.php" class="createButton">Edit Steps</a>
-     <form action="addshopping.php" method="post">
+     <form action="addshopping.php" method="get">
      <button type="submit" name="addto" value="<?php echo $_SESSION['id'] ?>">Add to Shopping List</button>
      </form>
  <?php
