@@ -64,7 +64,9 @@
          print_r($mainIngredients);
 
           foreach ($mainIngredients as $key => $value) {
-              echo $value;
+               foreach($key as $name => $result) {
+                echo $name;
+               }
           }
            
 
