@@ -65,7 +65,7 @@ echo $_SESSION['user_id'];
          </ul>
         </div>
     </div>
-   
+    <a href="recipeInfo.php">Submit recipe </a>
     
 <?php
  
