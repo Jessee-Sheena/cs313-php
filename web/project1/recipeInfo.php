@@ -64,11 +64,12 @@
          print_r($mainIngredients);
 
          $size = sizeof($mainIngredients);
-          for ($i = 0; i < $size; $i++ ) {
+         echo $size;
+         /* for ($i = 0; i < $size; $i++ ) {
                foreach($mainIngredients[$i] as $key => $value) {
                        echo $value;
                }
-          }
+          }*/
            
 
 
