@@ -41,11 +41,11 @@
          </table>
     
         
-  <?php  }  
-    if($_SESSION['section'] = "main") {?>
-        <div id="ingredientList">
+  <?php  } ?>
+ <div id="ingredientList">
            <h2> Ingredients </h2>
-              <div class="ingredientSections">
+              <div class="ingredientSections"> 
+    <?php if($_SESSION['section'] = "main") {?>
               <div>
               <h3 > Main Entre</h3>
               <?php
