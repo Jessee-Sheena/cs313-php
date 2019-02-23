@@ -63,9 +63,10 @@
           $mainIngredients = $mainArray->fetchAll();
          print_r($mainIngredients);
 
-          foreach ($mainIngredients as $key => $value) {
-               foreach($key as $name => $result) {
-                echo $name;
+         $size = sizeof($mainIngredients);
+          for ($i = 0; i < $size; $i++ ) {
+               foreach($mainIngredients[$i] as $key => $value) {
+                echo $value;
                }
           }
            
