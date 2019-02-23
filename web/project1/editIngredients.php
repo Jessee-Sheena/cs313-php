@@ -78,7 +78,8 @@ echo $_POST['sectionName2']. "<br>";
            break;
       }
       $quantity = htmlspecialchars($_POST['amount2']);
-      if($_POST['updated'] == "add") {         
+      if($_POST['updated'] == "add") {  
+       $_SESSION['ingredientID2'] = 1000000;
          $db->query("INSERT INTO recipe_ingredients (ingredient_id, recipe_id, measurement_id, ingredient_amount, section_id )
          VALUES ('". $_SESSION['ingredientID2'] . "', '" . $_SESSION['Id'] . "', '" . $_SESSION['measurementID2'] . "', '" . $quantity."', '" . $id . "');");
        }
