@@ -3,12 +3,6 @@ session_start();
 include_once "header.php";
 require "config.php";
 $db=getDb();
-echo $_POST['updated']. "<br>";
-echo $_SESSION['id']. "<br>";
-echo $_SESSION['ingredientID2']. "<br>";
-echo $_SESSION['measurementID2']. "<br>";
-echo $_POST['amount2']. "<br>";
-echo $_POST['sectionName2']. "<br>";
 
 ?>
   <div id="editIngredient">

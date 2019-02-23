@@ -4,7 +4,7 @@ session_start();
 require "config.php";
 $db=getDb();
 
-echo $_SESSION['recipeId'];
+
 
 if(isset($_POST['steps'])) {
       $step = htmlspecialchars($_POST['steps']);  
