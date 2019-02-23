@@ -123,10 +123,14 @@ div#stepsFormDiv {
     display: none;
     color: red;
 }
+#pictureRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr `fr 1fr;
+}
 .pict {
     position: relative;
-    max-height: 200px;
-    max-width: 200px;
+    height: 200px;
+    width: 200px;
     overflow: hidden;
 }
     .pict img {
