@@ -1,9 +1,5 @@
-  <link rel="stylesheet" href="home.css" />
-<?php 
-   session_start();      
-   require "config.php";
-   $db=getDb();
-   ?>
+ 
+
    <h2> Other Recipe's  of Interest</h2>
    <div id="pictureRow">      
    <?php      
