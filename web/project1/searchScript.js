@@ -48,7 +48,7 @@ $(document).ready(function () {
 				'steps': step, 'stepNum': num},
 			type: "POST",
 			success: function (data) {
-				alert(data);
+				
 				var ingredients = "<li>" + data + "</li>";
 				$('#stepList').append(ingredients);
 			}
@@ -71,7 +71,7 @@ $(document).ready(function () {
 			},
 			type: "POST",
 			success: function (data) {
-				alert(data);
+				
 				var ingredients = "<li>" + data + "</li>";
 				$('#ingredientList').append(ingredients);
 				$('#stepsFormDiv').css("display", "block");

@@ -4,6 +4,7 @@ session_start();
 require "config.php";
 $db=getDb();
 $_SESSION['recipeId'];
+$_SESSION['section'] = htmlspecialchars($_POST['sectionName']);
 foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT 1;") as $row)
 {
                $_SESSION['recipeId'] = $row['recipe_id'];        
@@ -39,7 +40,7 @@ foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT
      
   if(isset($_POST['amount'])) {
       $id = 1;
-      switch ($_POST['sectionName'])   {
+      switch ($_SESSION['section'])   {
       case "main":
            $id = 1;
            break;
@@ -53,7 +54,7 @@ foreach ($db->query(" SELECT recipe_id FROM recipe ORDER BY recipe_id DESC LIMIT
            $id = 1;
            break;
       }
-      echo $_POST['sectionName'];
+     
       $quantity = htmlspecialchars($_POST['amount']);
       $db->query("INSERT INTO recipe_ingredients (ingredient_id, recipe_id, measurement_id, ingredient_amount, section_id )
       VALUES ('". $_SESSION['ingredientID'] . "', '" . $_SESSION['recipeId'] . "', '" . $_SESSION['measurementID'] . "', '" . $quantity."', '" . $id . "');");
