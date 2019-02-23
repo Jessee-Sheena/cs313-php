@@ -47,7 +47,7 @@
 				break;
 			case 'cuisine':
 				 $keyWord = $_POST['typeCuisine'];
-               foreach ($db->prepare("SELECT recipe_name, recipe_id, image, recipe_description FROM recipe WHERE lower(cuisine) = lower ( '" . $keyWord ."')") as $row)
+               foreach ($db->query("SELECT recipe_name, recipe_id, image, recipe_description FROM recipe WHERE lower(cuisine) = lower ( '" . $keyWord ."')") as $row)
                {
                  echo '<div class="listSection"><img src="'.$row['image'] . '" alt= "food"/>';                      
                  echo '<h2 class="listHeader"><a href="recipeInfo.php?id='.$row['recipe_id'].'">'. $row['recipe_name'] . '</a></h2>';
