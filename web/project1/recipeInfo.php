@@ -52,7 +52,6 @@
                  q.ingredient_amount,
                  m.unit,
 		         s.section_name
-                 s.section_id
                  FROM ingredients AS i
                  JOIN recipe_ingredients AS q ON q.ingredient_id = i.ingredient_id
                  JOIN measurement AS m ON m.measurement_id = q.measurement_id
@@ -60,6 +59,7 @@
                  JOIN section AS s ON s.section_id = q.section_id
                  WHERE r.recipe_id =". $_SESSION['id'] ."AND s.section_id = 1
                  ORDER BY q.ingredient_id ASC;");
+          $query->execute();      
           $mainIngredients = $array->fetch_all();
           print_r($mainIngredients);
         /* ?>
