@@ -4,7 +4,7 @@ include_once "header.php";
 require "config.php";
 $db=getDb();
    
-
+echo $_SESSION['user_id'];
    $name = htmlspecialchars($_POST['recipeName']);
    $description = htmlspecialchars($_POST['recipeDescription']);
    $cookTime = htmlspecialchars($_POST['cook_Time']);
@@ -17,12 +17,12 @@ $db=getDb();
   
   if(preg_match("!image!", $_FILES['recipeImage']['type'])) {
        
-    /*if (copy($_FILES['recipeImage']['tmp_name'], $recipeImage_path)) {
+    if (copy($_FILES['recipeImage']['tmp_name'], $recipeImage_path)) {
       
       
         $db->query("INSERT INTO recipe (recipe_name, recipe_description, cook_time, prep_time, cuisine, total_time, serving_size, calories, image, user_id) VALUES ('".$name."', '".$description. "', '".$cookTime."', '".$prepTime."', '".$cuisine."', '".$totalTime."', '".$serving."', '".$calories."', '".$recipeImage_path."', '" . $_SESSION['user_id'] . "');");
               
-   }*/
+    }
    }
  
 ?>
