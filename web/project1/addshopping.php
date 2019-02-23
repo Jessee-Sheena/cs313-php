@@ -10,7 +10,7 @@
 
    }else {  
      $_SESSION['shoppingList']= array();
-     
+     array_push($_SESSION['shoppingList'], $item);
    }
   
    //header('Location: shoppingList.php');
