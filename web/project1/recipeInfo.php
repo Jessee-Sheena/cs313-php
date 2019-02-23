@@ -47,7 +47,7 @@
       <div class="ingredientSections"  >
       
        <?php
-         $array = $db->query("SELECT
+         $mainArray = $db->query("SELECT
                  i.ingredient_name,
                  q.ingredient_amount,
                  m.unit,
@@ -59,12 +59,18 @@
                  JOIN section AS s ON s.section_id = q.section_id
                  WHERE r.recipe_id =". $_SESSION['id'] ."AND s.section_id = 1
                  ORDER BY q.ingredient_id ASC;");
-          $array->execute();      
-          $mainIngredients = $array->fetchAll();
+          $mainArray->execute();      
+          $mainIngredients = $mainArray->fetchAll();
           print_r($mainIngredients);
+
+          foreach ($mainArray as $key => $value) {
+              echo $key;
+          }
+           
+
+
          ?>
         
-            <p><?php// echo $row['ingredient_amount'] . $row['unit'] . '<span class="space"> ' . $row['ingredient_name'] . '</span>'  ?><p>    
        </div>
    </div>
   
