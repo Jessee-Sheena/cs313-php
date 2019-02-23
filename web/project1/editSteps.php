@@ -11,11 +11,14 @@ if(isset($_POST['steps2'])) {
     if($_POST['update'] == "add") {
         $db->query("INSERT INTO steps (recipe_id, step_number, step_instruction)
         VALUES ( '". $_SESSION['id'] ."', ' " . $stepNum ."', ' " . $step . "');");
+        header('Location: recipInfo.php');
+        die();
       
       }
     if($_POST['update'] == "exist") {
        $db->query("UPDATE steps SET recipe_id ='". $_SESSION['id'] . "', step_instruction ='". $step . "' WHERE step_number ='" . $stepNum . "';" );
-        
+       header('Location: recipInfo.php');
+       die();
     }
 }
 ?>
