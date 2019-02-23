@@ -123,3 +123,8 @@ div#stepsFormDiv {
     display: none;
     color: red;
 }
+#pictureRow img{
+    max-height:200px;
+    max-width: 200px;
+    overflow: hidden;
+}

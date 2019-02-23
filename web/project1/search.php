@@ -102,5 +102,6 @@
 
 
 <?php
+   include_once "otherItems.php";
    include_once "footer.php";
  ?>
