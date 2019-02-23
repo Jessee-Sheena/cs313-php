@@ -66,7 +66,7 @@
          $size = sizeof($mainIngredients);
           for ($i = 0; i < $size; $i++ ) {
                foreach($mainIngredients[$i] as $key => $value) {
-                echo $value;
+                       echo $value;
                }
           }
            
