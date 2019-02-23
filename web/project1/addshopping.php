@@ -13,6 +13,6 @@
      array_push($_SESSION['shoppingList'], $item);
    }
   
-   //header('Location: shoppingList.php');
-   //die();
+   header('Location: recipeInfo.php');
+   die();
    ?>
