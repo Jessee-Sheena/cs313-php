@@ -65,7 +65,7 @@
         
                       <p><?php echo $row['ingredient_amount'] . $row['unit'] . '<span class="space"> ' . $row['ingredient_name'] . '</span>'  ?><p>    
 
-              <?php} ?>
+              <?php } ?>
                 </div>
   <?php  } 
       if($_SESSION['section'] = "marinade") {?>
