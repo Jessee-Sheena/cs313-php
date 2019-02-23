@@ -3,7 +3,7 @@
    include_once "header.php";
    require "config.php";
    $db=getDb();
-   $_SESSION['id'] = $_GET['id'];  
+    
    
  ?>
  <div id="infoDiv">
