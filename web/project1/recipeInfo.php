@@ -66,8 +66,8 @@
          $size = sizeof($mainIngredients);
          echo $size;
           for ($i = 0; i < 2; $i++ ) {
-             $size2 = sizeof($mainIngredients[$i]);
-             echo $size2;
+             
+             echo $mainIngredients[i][0];
                //for($n = 0; n < ) {
                        //echo $value;
                //}
