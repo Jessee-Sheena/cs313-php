@@ -71,15 +71,13 @@ $db=getDb();
            $id = 1;
            break;
       }
-      if($_POST['updated'] == 'add') {
-    
       $quantity = htmlspecialchars($_POST['amount']);
-      $db->query("INSERT INTO recipe_ingredients (ingredient_id, recipe_id, measurement_id, ingredient_amount, section_id )
-      VALUES ('". $_SESSION['ingredientID'] . "', '" . $_SESSION['Id'] . "', '" . $_SESSION['measurementID'] . "', '" . $quantity."', '" . $id . "');");
+      if($_POST['updated'] == "add") {         
+         $db->query("INSERT INTO recipe_ingredients (ingredient_id, recipe_id, measurement_id, ingredient_amount, section_id )
+         VALUES ('". $_SESSION['ingredientID'] . "', '" . $_SESSION['Id'] . "', '" . $_SESSION['measurementID'] . "', '" . $quantity."', '" . $id . "');");
        }
-       if($_POST['updated'] == 'exist') {
-       $quantity = htmlspecialchars($_POST['amount']);
-       $db->query("UPDATE recipe_ingredients SET ingredient_id ='" . $_SESSION['ingredientID'] . "', measurement_id ='" . $_SESSION['measurementID'] . "', ingredient_amount = '" . $quantity . "', section_id = '" . $id . "' WHERE recipe_id = '" . $_SESSION['Id'] . "';" );
+       if($_POST['updated'] == "exist") {
+              $db->query("UPDATE recipe_ingredients SET ingredient_id ='" . $_SESSION['ingredientID'] . "', measurement_id ='" . $_SESSION['measurementID'] . "', ingredient_amount = '" . $quantity . "', section_id = '" . $id . "' WHERE recipe_id = '" . $_SESSION['Id'] . "';" );
       
        }
     
