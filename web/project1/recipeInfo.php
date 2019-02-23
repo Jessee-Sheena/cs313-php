@@ -11,6 +11,9 @@
      <a href="edit.php" class="createButton">Edit Recipe Info</a>
      <a href="editIngredients.php" class="createButton">Edit ingredients</a>
      <a href="editSteps.php" class="createButton">Edit Steps</a>
+     <form action="addshopping.php" method="post">
+     <button type="submit"= name="addto" value="<?php $_SESSION['id'] ?>">Add to Shopping List</button>
+     </form>
  <?php
   
      foreach ($db->query("SELECT * FROM recipe WHERE recipe_id = " .$_SESSION['id'] ) as $row) {?>
