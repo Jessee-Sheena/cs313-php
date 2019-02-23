@@ -33,7 +33,7 @@ $db=getDb();
            <label for="ingredient">Ingredient name: </label>
            <input name="ingredient" id ="ingredient" type="text" required>
            <label for ="amount"> Amount of ingredient: </label>
-           <input name="amount" id="amount" type="number" required>
+           <input name="amount" id="amount" type="text" required>
            <label for="measurement">Unit of Measurement: (ie cup, oz) </label>
            <input name="measurement" id="measurement" type ="text" required>
            <p> This ingredient is part of the:</p>

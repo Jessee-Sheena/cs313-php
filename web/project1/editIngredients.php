@@ -16,7 +16,7 @@ $db=getDb();
            <label for="ingredient2">Ingredient name: </label>
            <input name="ingredient2" id ="ingredient2" type="text" required>
            <label for ="amount2"> Amount of ingredient: </label>
-           <input name="amount2" id="amount2" type="number" required>
+           <input name="amount2" id="amount2" type="text" required>
            <label for="measurement2">Unit of Measurement: (ie cup, oz) </label>
            <input name="measurement2" id="measurement2" type ="text" required>
            <p> This ingredient is part of the:</p>
@@ -26,7 +26,7 @@ $db=getDb();
            <label for="sauce">Sauce</label>
            <input type="radio" name="sectionName2" id="marinade2"  value="marinade" required>
            <label for="marinade">Marinade</label>
-           <button type="submit" id="ingredientSubmit2" >Edit ingredient </button>
+           <button type="submit" id="ingredientSubmit2" >Submit ingredient </button>
         </form>
     </div>
 <?php

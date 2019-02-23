@@ -34,7 +34,7 @@ if(isset($_POST['steps2'])) {
            <input type="number" name="stepNum2" id="stepNum2" required>
            <label for="steps2"> Step Instructions </label>
            <textarea rows="4" cols="32" name="steps2" id="steps2" required></textarea>
-           <button type="submit" id="stepsSubmit2" >Edit Steps </button>
+           <button type="submit" id="stepsSubmit2" >Submit Steps </button>
         </form>
         </div>
        
