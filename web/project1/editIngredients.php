@@ -3,7 +3,7 @@ session_start();
 include_once "header.php";
 require "config.php";
 $db=getDb();
-
+echo $_POST['updated'];
 ?>
   <div id="editIngredient">
         <form action="editIngredients.php" method="post" id="editingredientform">
