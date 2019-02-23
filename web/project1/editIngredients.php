@@ -4,7 +4,7 @@ include_once "header.php";
 require "config.php";
 $db=getDb();
 echo $_POST['updated']. "<br>";
-echo $_SESSION['Id']. "<br>";
+echo $_SESSION['id']. "<br>";
 echo $_SESSION['ingredientID2']. "<br>";
 echo $_SESSION['measurementID2']. "<br>";
 echo $_POST['amount2']. "<br>";
@@ -83,7 +83,7 @@ echo $_POST['sectionName2']. "<br>";
          VALUES ('". $_SESSION['ingredientID2'] . "', '" . $_SESSION['Id'] . "', '" . $_SESSION['measurementID2'] . "', '" . $quantity."', '" . $id . "');");
        }
        if($_POST['updated'] == "exist") {
-              $db->query("UPDATE recipe_ingredients SET ingredient_id ='" . $_SESSION['ingredientID2'] . "', measurement_id ='" . $_SESSION['measurementID2'] . "', ingredient_amount = '" . $quantity . "', section_id = '" . $id . "' WHERE recipe_id = '" . $_SESSION['Id'] . "';" );
+              $db->query("UPDATE recipe_ingredients SET ingredient_id ='" . $_SESSION['ingredientID2'] . "', measurement_id ='" . $_SESSION['measurementID2'] . "', ingredient_amount = '" . $quantity . "', section_id = '" . $id . "' WHERE recipe_id = '" . $_SESSION['id'] . "';" );
       
        }
     
