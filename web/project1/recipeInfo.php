@@ -61,9 +61,9 @@
                  ORDER BY q.ingredient_id ASC;");
           $mainArray->execute();      
           $mainIngredients = $mainArray->fetchAll();
-          print_r($mainIngredients);
+         // print_r($mainIngredients);
 
-          foreach ($mainArray as $key => $value) {
+          foreach ($mainIngredients as $key => $value) {
               echo $key;
           }
            
