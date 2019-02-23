@@ -128,7 +128,7 @@ div#stepsFormDiv {
     grid-template-columns: 1fr 1fr 1fr fr 1fr;
 }
 .pict {
-    position: relative;
+    
     height: 200px;
     width: 200px;
     overflow: hidden;
