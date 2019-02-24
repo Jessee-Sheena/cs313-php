@@ -141,7 +141,7 @@ div#stepsFormDiv {
         height: 100%;
         object-fit: cover;
     }
-#signIn {
+.signIn {
     text-align: center;
     width: 80%;
     padding: 4em;
@@ -177,4 +177,5 @@ div#stepsFormDiv {
     text-align: start;
     margin: 0em;
     font: 400 13.3333px Arial;
+    margin-top: 1em;
 }

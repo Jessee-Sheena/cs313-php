@@ -5,7 +5,7 @@
    $db=getDb();
       
 ?>
-<div id="signIn">
+<div class="signIn">
 <form action="sign_in.php" method="post">
 <label for="username"> Enter username: </label>
 <input type="text" name="username" id="username" required>
