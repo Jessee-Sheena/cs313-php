@@ -143,6 +143,7 @@ div#stepsFormDiv {
     }
 .signIn {
     text-align: center;
+    display: inline;
     width: 80%;
     padding: 4em;
     margin: auto;
