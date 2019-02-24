@@ -140,9 +140,23 @@ div#stepsFormDiv {
         object-fit: cover;
     }
 #signIn {
+    text-align: center;
     width: 80%;
     padding: 4em;
     margin: auto;
     border: 1px solid black;
     border-radius: 50px;
+}
+.createButton {
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
 }
