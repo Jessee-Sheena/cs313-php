@@ -148,6 +148,7 @@ div#stepsFormDiv {
     border-radius: 50px;
 }
 .createButton {
+    text-decoration: none;
     align-items: flex-start;
     text-align: center;
     cursor: default;
