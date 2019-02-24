@@ -26,5 +26,8 @@
             <?php }
         }?>
 <?php
-  } include_once "footer.php";
+  } else {
+  echo "<h2> Your Shopping List is Empty</h2>";
+}
+include_once "footer.php";
  ?>
