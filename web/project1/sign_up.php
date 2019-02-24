@@ -26,13 +26,19 @@ if(isset($_POST['password']) AND isset($_POST['password2']) AND isset($_POST['us
       
 ?>
 <div class="signIn">
+<div>
 <form action="sign_up.php" method="post"> 
 <span class="asterisk user" > * </span><label for="username"> Create a username: </label>
 <input type="text" name="username" id="username" required>
+</div>
+<div>
 <span class="asterisk password" > * </span><label for="password"> Create a password: (at least 7 charachters)</label>
 <input type="password" name="password" id="password" pattern="(?=.*\d)[A-Za-z\d]{7,}" required>
+</div>
+<div>
 <span class="asterisk password" > * </span><label for="password2"> Verify Password </label>
 <input type="password" name="password2" id="password2" required>
+</div>
 <input type="submit">
 </form>
 </div>
