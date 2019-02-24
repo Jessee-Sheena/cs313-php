@@ -151,6 +151,9 @@ div#stepsFormDiv {
     border: 1px solid black;
     border-radius: 50px;
 }
+.signIn div {
+    margin: 1em;
+}
 .createButton {
     text-decoration: none;
     align-items: flex-start;

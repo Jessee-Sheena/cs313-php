@@ -38,8 +38,9 @@ if(isset($_POST['password']) AND isset($_POST['password2']) AND isset($_POST['us
 <div>
 <span class="asterisk password" > * </span><label for="password2"> Verify Password </label>
 <input type="password" name="password2" id="password2" required>
-</div>
 <input type="submit">
+</div>
+
 </form>
 </div>
 
