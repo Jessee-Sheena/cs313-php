@@ -159,4 +159,8 @@ div#stepsFormDiv {
     border-style: outset;
     border-color: buttonface;
     border-image: initial;
+    padding: 1px 6px;
+    -webkit-appearance: push-button;
+    user-select: none;
+    white-space: pre;
 }
