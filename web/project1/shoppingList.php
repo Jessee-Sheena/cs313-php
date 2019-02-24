@@ -28,6 +28,8 @@
 <?php
   } else {
   echo "<h2> Your Shopping List is Empty</h2>";
+  echo "<h3> Browse these recipes<h3>";
+  include_once "otherItems.php";
 }
 include_once "footer.php";
  ?>
