@@ -152,6 +152,7 @@ div#stepsFormDiv {
     border-radius: 50px;
 }
 .signIn div {
+    justify-self:flex-start;
     margin-top: 1em;
 }
 .createButton {
