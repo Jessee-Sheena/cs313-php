@@ -32,7 +32,7 @@ if(isset($_POST['password']) AND isset($_POST['password2']) AND isset($_POST['us
 <input type="text" name="username" id="username" required>
 </div>
 <div>
-<span class="asterisk password" > * </span><label for="password"> Create a password: (at least 7 charachters)</label>
+<span class="asterisk password" > * </span><label for="password"> Create a password: </label>
 <input type="password" name="password" id="password" pattern="(?=.*\d)[A-Za-z\d]{7,}" required>
 </div>
 <div>
