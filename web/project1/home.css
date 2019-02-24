@@ -141,8 +141,8 @@ div#stepsFormDiv {
     }
 #signIn {
     width: 80%;
-    height: 400px;
+    padding: 4em;
     margin: auto;
     border: 1px solid black;
-    border-radius: 15px 50px 30px 5px;
+    border-radius: 50px;
 }
