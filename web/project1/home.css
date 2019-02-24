@@ -140,8 +140,9 @@ div#stepsFormDiv {
         object-fit: cover;
     }
 #signIn {
-    width: 400px;
+    width: 80%;
     height: 400px;
     margin: auto;
+    border: 1px solid black;
     border-radius: 15px 50px 30px 5px;
 }
