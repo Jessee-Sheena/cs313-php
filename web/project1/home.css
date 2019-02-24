@@ -139,3 +139,9 @@ div#stepsFormDiv {
         height: 100%;
         object-fit: cover;
     }
+#signIn {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border-radius: 15px 50px 30px 5px;
+}
