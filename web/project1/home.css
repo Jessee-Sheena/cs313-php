@@ -152,7 +152,7 @@ div#stepsFormDiv {
     border-radius: 50px;
 }
 .signIn div {
-    margin: 1em;
+    margin-top: 1em;
 }
 .createButton {
     text-decoration: none;
