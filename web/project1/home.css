@@ -150,9 +150,10 @@ div#stepsFormDiv {
     margin: auto;
     border: 1px solid black;
     border-radius: 50px;
+    justify-items: flex-start;
 }
 .signIn div {
-    justify-self:flex-start;
+    
     margin-top: 1em;
 }
 .createButton {

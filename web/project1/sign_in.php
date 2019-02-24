@@ -7,11 +7,15 @@
 ?>
 <div class="signIn">
 <form action="sign_in.php" method="post">
+<div>
 <label for="username"> Enter username: </label>
 <input type="text" name="username" id="username" required>
+</div>
+<div>
 <label for="password"> Enter password: </label>
 <input type="password" name="password" id="password" required>
 <input type="submit">
+</div>
 <a href="sign_up.php" class="createButton"> sign up </a>
 <?php
 if(!empty($_SESSION['user_id'])){ ?>
